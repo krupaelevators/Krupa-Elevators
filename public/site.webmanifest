@@ -1,0 +1,23 @@
+{
+  "name": "Krupa Elevators - Best Elevator Company in Ahmedabad",
+  "short_name": "Krupa Elevators",
+  "description": "Leading elevator manufacturer and plant in Kathwada GIDC, Ahmedabad. Affordable passenger, home, capsule, hospital, goods, car, MRL and hydraulic elevators at direct factory best price.",
+  "id": "/Krupa-Elevators/",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#0799a4",
+  "icons": [
+    {
+      "src": "assets/logo-icone.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/logo-icone.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- 1. Home Page - Highest Priority (#1 Best Elevator Company in Ahmedabad) -->
+  <url>
+    <loc>https://www.krupaelevators.com/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/hero/building.jpg</image:loc>
+      <image:title>Best Elevator Company in Ahmedabad - Krupa Elevators</image:title>
+      <image:caption>Krupa Elevators - #1 Elevator Company and Manufacturing Plant in Kathwada GIDC, Ahmedabad</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 2. Products Hub & Elevators Index -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/elevators</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/elevators/passenger_elevator.jpg</image:loc>
+      <image:title>Affordable Elevator Solutions and Best Price Lifts in Ahmedabad</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3. All 8 Elevator Models - High Priority (Named with Best Price & Affordable) -->
+  <!-- 3a. Passenger Elevator -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/elevators/passenger</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/elevators/passenger_elevator.jpg</image:loc>
+      <image:title>Affordable Passenger Elevator at Best Price in Ahmedabad</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3b. Home / Villa Elevator -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/elevators/home</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/elevators/home_elevator.jpg</image:loc>
+      <image:title>Affordable Home Elevator and Villa Lift at Best Price in Ahmedabad</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3c. Capsule Elevator -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/elevators/capsule</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/elevators/capsule_elevator.jpg</image:loc>
+      <image:title>Best Price Capsule Panoramic Glass Elevator in Ahmedabad</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3d. Hospital / Stretcher Elevator -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/elevators/hospital</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/elevators/hospital_elevator.jpg</image:loc>
+      <image:title>Affordable Hospital Bed and Stretcher Elevator at Best Price in Ahmedabad</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3e. Goods & Freight Elevator -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/elevators/goods</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/elevators/goods_elevator.jpg</image:loc>
+      <image:title>Affordable Industrial Goods Elevator at Best Price in Ahmedabad Kathwada</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3f. MRL (Machine-Room-Less) Elevator -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/elevators/mrl</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/elevators/mrl_elevator.jpg</image:loc>
+      <image:title>Affordable MRL Machine Room Less Elevator at Best Price in Ahmedabad</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3g. Hydraulic Elevator -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/elevators/hydraulic</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/elevators/hydraulic_elevator.jpg</image:loc>
+      <image:title>Affordable Hydraulic Elevator at Best Price in Ahmedabad</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3h. Car Elevator & Multi-Level Parking -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/elevators/car</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.krupaelevators.com/assets/elevators/car_elevator.jpg</image:loc>
+      <image:title>Affordable Car Elevator and Automobile Lift at Best Price in Ahmedabad</image:title>
+    </image:image>
+  </url>
+
+  <!-- 4. Products Hub -->
+  <url>
+    <loc>https://www.krupaelevators.com/products</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 5. Door Systems -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/doors</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 6. Cabin Interior Series -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/interiors</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 7. Elevator Technology & Safety Systems -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/technology</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 8. Architects & Engineers Corner (Civil Drawings) -->
+  <url>
+    <loc>https://www.krupaelevators.com/products/architects-corner</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 9. Services & AMC Maintenance Hub -->
+  <url>
+    <loc>https://www.krupaelevators.com/services</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.krupaelevators.com/services/amc-maintenance</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.krupaelevators.com/services/installation</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.krupaelevators.com/services/modernization</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.krupaelevators.com/services/emergency-support</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 10. About Us & Manufacturing Plant Authority -->
+  <url>
+    <loc>https://www.krupaelevators.com/about</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 11. Projects & Installations Portfolio in Ahmedabad & Gujarat -->
+  <url>
+    <loc>https://www.krupaelevators.com/about/projects</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 12. Contact Us / Quick Quote Desk -->
+  <url>
+    <loc>https://www.krupaelevators.com/contact</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+</urlset>

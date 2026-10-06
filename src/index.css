@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Site-wide typography — swap fonts here (also update the Google Fonts link in index.html). */
+  :root {
+    --font-display: "Manrope", "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+    --heading-tracking: -0.012em;
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 selection:bg-brand-teal selection:text-white;
+    font-family: var(--font-body);
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+    width: 100%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: var(--heading-tracking);
+  }
+  /* Prevent iOS zoom on input focus while keeping modern styling */
+  @media screen and (max-width: 640px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+  }
+  button, a {
+    touch-action: manipulation;
+  }
+}
+
+/* Page transition — new pages fade in with a slight rise (see PageTransition in App.jsx) */
+.page-transition {
+  animation: page-in 320ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+}
+
+/* Enter animations for menus & dropdowns — the `animate-in fade-in slide-in-from-top-* zoom-in-*`
+   classes used in Navbar etc. (no tailwindcss-animate plugin is installed, so they are defined here). */
+.animate-in {
+  animation: enter 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.fade-in { --enter-opacity: 0; }
+.zoom-in-95 { --enter-scale: 0.95; }
+.slide-in-from-top-1 { --enter-y: -0.25rem; }
+.slide-in-from-top-1\.5 { --enter-y: -0.375rem; }
+.slide-in-from-top-3 { --enter-y: -0.75rem; }
+@keyframes enter {
+  from {
+    opacity: var(--enter-opacity, 1);
+    transform: translate3d(0, var(--enter-y, 0), 0) scale(var(--enter-scale, 1));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    animation: none;
+  }
+}
+
+/* Mobile Safe Area Inset Helpers */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+.bottom-safe {
+  bottom: env(safe-area-inset-bottom, 0px);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.gradient-teal-orange {
+  background: linear-gradient(135deg, #0799a4 0%, #0b7580 50%, #f36a21 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card-dark {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.8;
+    box-shadow: 0 0 15px rgba(7, 153, 164, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 28px rgba(7, 153, 164, 0.6);
+  }
+}
+
+@keyframes elevatorTransit {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Modern Card Hover Effects */
+.card-hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.12), 0 10px 15px -5px rgba(7, 153, 164, 0.08);
+}
+
+/* Smooth Application Transition Animations */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-scale {
+  animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-slide-up {
+  animation: slideUpFade 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* Hero progress bar — runs once per slide (5.5 s) then resets via key change */
+@keyframes hero-progress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
