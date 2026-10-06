@@ -1,0 +1,26 @@
+# Robots.txt for Krupa Elevators
+# Website: https://www.krupaelevators.com
+# #1 Best Elevator Company & Manufacturing Plant in Ahmedabad, Gujarat
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Bingbot specific rules
+User-agent: Bingbot
+Allow: /
+
+# Canonical Sitemap URL
+Sitemap: https://www.krupaelevators.com/sitemap.xml
