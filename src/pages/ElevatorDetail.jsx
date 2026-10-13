@@ -33,6 +33,7 @@ import ScrollReveal from "../components/ScrollReveal";
 import WhatsAppIcon from "../components/common/WhatsAppIcon";
 import MergedSpecTable from "../components/MergedSpecTable";
 import Seo from "../components/common/Seo";
+import { absoluteUrl } from "../config/site";
 import PageHero from "../components/common/PageHero";
 
 const componentIcons = {
@@ -91,10 +92,10 @@ export default function ElevatorDetail({ onOpenBrochure }) {
     "@graph": [
       {
         "@type": "Product",
-        "@id": `https://www.krupaelevators.com/products/elevators/${elevator.id}#product`,
+        "@id": absoluteUrl(`/products/elevators/${elevator.id}#product`),
         name: elevator.seoName || `${elevator.name} (Affordable Solution & Best Price)`,
         description: elevator.overview,
-        image: `https://www.krupaelevators.com${elevator.image}`,
+        image: absoluteUrl(`${elevator.image}`),
         brand: {
           "@type": "Brand",
           name: "KRUPA ELEVATORS"
@@ -128,19 +129,19 @@ export default function ElevatorDetail({ onOpenBrochure }) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.krupaelevators.com/"
+            "item": absoluteUrl("/")
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Elevator Models",
-            "item": "https://www.krupaelevators.com/products/elevators"
+            "item": absoluteUrl("/products/elevators")
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": elevator.name,
-            "item": `https://www.krupaelevators.com/products/elevators/${elevator.id}`
+            "item": absoluteUrl(`/products/elevators/${elevator.id}`)
           }
         ]
       },
@@ -168,6 +169,8 @@ export default function ElevatorDetail({ onOpenBrochure }) {
         title={elevator.seoTitle || `${elevator.name} — Affordable Solution & Best Price in Ahmedabad`}
         description={`Affordable ${elevator.name} at direct factory best price by Krupa Elevators Ahmedabad. Manufactured in Kathwada GIDC. ${elevator.overview?.slice(0, 130)}`}
         keywords={elevator.seoKeywords}
+        image={elevator.image}
+        type="product"
         schema={dynamicSchema}
       />
 

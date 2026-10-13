@@ -1,26 +1,26 @@
 # Robots.txt for Krupa Elevators
-# Website: https://www.krupaelevators.com
-# #1 Best Elevator Company & Manufacturing Plant in Ahmedabad, Gujarat
+# Website: https://krupaelevators.com
 
+# Search engines and AI assistants are welcome to read the whole site.
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
-# Googlebot specific rules
-User-agent: Googlebot
-Allow: /
-Allow: /*.js$
-Allow: /*.css$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.webp$
-Allow: /*.svg$
-
-# Bingbot specific rules
+# AI search & assistant crawlers (listed explicitly so the intent is unambiguous)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot
+User-agent: Applebot-Extended
 User-agent: Bingbot
+User-agent: CCBot
 Allow: /
 
-# Canonical Sitemap URL
-Sitemap: https://www.krupaelevators.com/sitemap.xml
+Sitemap: https://krupaelevators.com/sitemap.xml
+
+# Plain-text site summary for AI assistants: https://krupaelevators.com/llms.txt

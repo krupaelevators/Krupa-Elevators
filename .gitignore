@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+dist-server
+.vercel
 *.local
 
 # Raw large PDFs in root

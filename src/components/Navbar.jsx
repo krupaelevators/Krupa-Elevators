@@ -77,8 +77,7 @@ export default function Navbar() {
     if (location.pathname === "/") {
       e.preventDefault();
       if (window.location.hash) {
-        const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
-        window.history.replaceState(null, "", base ? base + "/" : "/");
+        window.history.replaceState(null, "", "/");
       }
       scrollToHero();
     }
@@ -89,8 +88,7 @@ export default function Navbar() {
     if (path === "/" && location.pathname === "/") {
       e.preventDefault();
       if (window.location.hash) {
-        const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
-        window.history.replaceState(null, "", base ? base + "/" : "/");
+        window.history.replaceState(null, "", "/");
       }
       scrollToHero();
     }
@@ -195,7 +193,7 @@ export default function Navbar() {
                   alt="Krupa Elevators"
                   width="169"
                   height="36"
-                  fetchPriority="high"
+                  fetchpriority="high"
                   decoding="async"
                   className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />

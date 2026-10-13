@@ -3,20 +3,31 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/jpeg" href="%BASE_URL%assets/logo-icone.jpg" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0799a4" />
 
-  <!-- Primary SEO Meta Tags -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K4V0EDFV4B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-K4V0EDFV4B');
+  </script>
+
+  <!-- Per-page SEO: this block is replaced for every route by scripts/prerender.mjs -->
+  <!--seo:start-->
   <title>KRUPA ELEVATORS | Best Elevator Company in Ahmedabad | Top Manufacturing Plant & Affordable Lifts</title>
   <meta name="description"
     content="KRUPA ELEVATORS is the #1 best elevator company and premier manufacturing plant in Ahmedabad, Gujarat. Direct manufacturer of affordable passenger, home villa, capsule, hospital, goods, car, MRL, and hydraulic elevators with factory-direct best price guarantee and 100% monopoly-free AMC." />
-  <meta name="keywords"
-    content="best elevator company in Ahmedabad, best manufacturing plant, affordable elevator solution, best price lift in Ahmedabad, elevator manufacturers in Ahmedabad, passenger elevator Ahmedabad best price, home lift Ahmedabad affordable, capsule elevator Gujarat, goods lift Kathwada GIDC, MRL elevator manufacturer, hydraulic elevator Ahmedabad, lift price in Ahmedabad, elevator AMC Ahmedabad" />
+  <link rel="canonical" href="https://krupaelevators.com/" />
+  <!--seo:end-->
   <meta name="author" content="KRUPA ELEVATORS" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.krupaelevators.com/" />
-  <link rel="manifest" href="%BASE_URL%site.webmanifest" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Geo Local SEO Tags for Ahmedabad, Gujarat -->
   <meta name="geo.region" content="IN-GJ" />
@@ -24,27 +35,13 @@
   <meta name="geo.position" content="23.0338;72.6738" />
   <meta name="ICBM" content="23.0338, 72.6738" />
 
-  <!-- Open Graph / Facebook / WhatsApp SEO -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.krupaelevators.com/" />
+  <!-- Open Graph (page-specific og:* and twitter:* tags are in the per-page block above) -->
   <meta property="og:site_name" content="KRUPA ELEVATORS" />
-  <meta property="og:title" content="KRUPA ELEVATORS | Best Elevator Company in Ahmedabad | Top Manufacturing Plant & Affordable Lifts" />
-  <meta property="og:description"
-    content="Ranked #1 best elevator company and manufacturing plant in Kathwada GIDC, Ahmedabad. Affordable passenger, home, capsule, hospital, and freight elevators with direct factory best price guarantee." />
-  <meta property="og:image" content="https://www.krupaelevators.com/assets/hero/building.jpg" />
   <meta property="og:locale" content="en_IN" />
 
-  <!-- Twitter Card SEO -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://www.krupaelevators.com/" />
-  <meta name="twitter:title" content="KRUPA ELEVATORS | Best Elevator Company in Ahmedabad | Top Manufacturing Plant & Affordable Lifts" />
-  <meta name="twitter:description"
-    content="Best elevator company and manufacturing plant in Ahmedabad, Gujarat. Direct factory best price guarantee on passenger, home, capsule, hospital, goods, and MRL lifts." />
-  <meta name="twitter:image" content="https://www.krupaelevators.com/assets/hero/building.jpg" />
-
   <!-- Preload critical hero LCP image and logo for instant rendering -->
-  <link rel="preload" as="image" href="%BASE_URL%assets/hero/building.webp" type="image/webp" fetchpriority="high" />
-  <link rel="preload" as="image" href="%BASE_URL%assets/logo-clean.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/hero/building.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/logo-clean.webp" type="image/webp" fetchpriority="high" />
 
   <!-- Google Fonts Preconnect and Non-blocking Async Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -74,16 +71,16 @@
     "@graph": [
       {
         "@type": ["LocalBusiness", "ManufacturingBusiness"],
-        "@id": "https://www.krupaelevators.com/#localbusiness",
+        "@id": "https://krupaelevators.com/#localbusiness",
         "name": "KRUPA ELEVATORS",
         "alternateName": ["Krupa Elevators Ahmedabad", "Krupa Elevator Manufacturing Works"],
         "description": "Ranked #1 Best Elevator Company and Manufacturing Plant in Ahmedabad, Gujarat. Direct manufacturer of affordable passenger, home, capsule, hospital, goods, car, MRL and hydraulic elevators with factory-direct best price guarantee and 100% monopoly-free AMC.",
-        "url": "https://www.krupaelevators.com/",
+        "url": "https://krupaelevators.com/",
         "telephone": "+918200859171",
         "email": "info@krupaelevators.com",
         "priceRange": "₹₹ (Affordable Direct Factory Best Price)",
-        "image": "https://www.krupaelevators.com/assets/hero/building.jpg",
-        "logo": "https://www.krupaelevators.com/assets/logo-clean.png",
+        "image": "https://krupaelevators.com/assets/hero/building.jpg",
+        "logo": "https://krupaelevators.com/assets/logo-clean.png",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1, Heritage Industrial Hub, Nr. Global Industrial Estate, Nr. Kotak Mahindra Bank, Kathwada GIDC Road No 5",
@@ -129,7 +126,7 @@
                 "@type": "Product",
                 "name": "Affordable Passenger Elevator at Best Price in Ahmedabad",
                 "description": "Form, function & architectural flexibility for residential apartments and commercial towers with best price guarantee.",
-                "url": "https://www.krupaelevators.com/products/elevators/passenger"
+                "url": "https://krupaelevators.com/products/elevators/passenger"
               }
             },
             {
@@ -138,7 +135,7 @@
                 "@type": "Product",
                 "name": "Affordable Home Villa Elevator at Best Price in Ahmedabad",
                 "description": "Compact single-phase 220V plug-and-play bungalow elevator requiring only 550mm pit at factory-direct best price.",
-                "url": "https://www.krupaelevators.com/products/elevators/home"
+                "url": "https://krupaelevators.com/products/elevators/home"
               }
             },
             {
@@ -147,7 +144,7 @@
                 "@type": "Product",
                 "name": "Best Price Capsule Panoramic Glass Elevator in Ahmedabad",
                 "description": "Luxury architectural curved glass panoramic elevator for shopping malls, atriums and hotels.",
-                "url": "https://www.krupaelevators.com/products/elevators/capsule"
+                "url": "https://krupaelevators.com/products/elevators/capsule"
               }
             },
             {
@@ -156,7 +153,7 @@
                 "@type": "Product",
                 "name": "Affordable Hospital Stretcher Elevator at Best Price in Ahmedabad",
                 "description": "Jerk-free patient stretcher bed elevator with priority medical recall and EMC shielding.",
-                "url": "https://www.krupaelevators.com/products/elevators/hospital"
+                "url": "https://krupaelevators.com/products/elevators/hospital"
               }
             },
             {
@@ -165,7 +162,7 @@
                 "@type": "Product",
                 "name": "Affordable Heavy-Duty Goods Elevator at Best Price in Ahmedabad",
                 "description": "Rugged industrial freight elevator engineered up to 5000 kg capacity at direct factory price in Kathwada GIDC.",
-                "url": "https://www.krupaelevators.com/products/elevators/goods"
+                "url": "https://krupaelevators.com/products/elevators/goods"
               }
             },
             {
@@ -174,7 +171,7 @@
                 "@type": "Product",
                 "name": "Affordable MRL (Machine-Room-Less) Elevator at Best Price in Ahmedabad",
                 "description": "Space-saving elevator eliminating rooftop machine room, saving 40% building space and cutting 30% power.",
-                "url": "https://www.krupaelevators.com/products/elevators/mrl"
+                "url": "https://krupaelevators.com/products/elevators/mrl"
               }
             },
             {
@@ -183,7 +180,7 @@
                 "@type": "Product",
                 "name": "Affordable Hydraulic Elevator at Best Price in Ahmedabad",
                 "description": "Zero top machine room hydraulic lift with flexible power unit placement up to 10m away.",
-                "url": "https://www.krupaelevators.com/products/elevators/hydraulic"
+                "url": "https://krupaelevators.com/products/elevators/hydraulic"
               }
             },
             {
@@ -192,7 +189,7 @@
                 "@type": "Product",
                 "name": "Affordable Car Elevator & Parking Lift at Best Price in Ahmedabad",
                 "description": "High-tonnage vehicle elevator and multi-level automated car parking systems.",
-                "url": "https://www.krupaelevators.com/products/elevators/car"
+                "url": "https://krupaelevators.com/products/elevators/car"
               }
             }
           ]
@@ -200,60 +197,20 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.krupaelevators.com/#website",
-        "url": "https://www.krupaelevators.com/",
+        "@id": "https://krupaelevators.com/#website",
+        "url": "https://krupaelevators.com/",
         "name": "KRUPA ELEVATORS",
         "publisher": {
-          "@id": "https://www.krupaelevators.com/#localbusiness"
+          "@id": "https://krupaelevators.com/#localbusiness"
         }
       }
     ]
   }
   </script>
 
-  <!-- Single Page Apps for GitHub Pages: restores clean URL from 404 redirect without hash -->
-  <script type="text/javascript">
-    (function (l) {
-      if (l.search[1] === '/') {
-        var decoded = l.search.slice(1).split('&').map(function (s) {
-          return s.replace(/~and~/g, '&')
-        }).join('?');
-        window.history.replaceState(null, null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    }(window.location))
-  </script>
 </head>
 
 <body class="bg-white text-slate-900 antialiased font-sans selection:bg-teal-500 selection:text-white">
-  <!-- Noscript Fallback for Instant Search Engine Crawler Indexing -->
-  <noscript>
-    <div style="padding: 24px; font-family: sans-serif; background: #f8fafc; color: #0f172a;">
-      <h1>KRUPA ELEVATORS — Best Elevator Company in Ahmedabad &amp; Premier Manufacturing Plant</h1>
-      <p>
-        KRUPA ELEVATORS is the leading elevator manufacturing company based in Kathwada GIDC, Ahmedabad, Gujarat.
-        We engineer, manufacture, install, and service affordable elevator solutions with a 100% monopoly-free ownership promise
-        and direct factory best price guarantee across Ahmedabad, Gandhinagar, and throughout Gujarat and India.
-      </p>
-      <h2>Affordable Elevator Solutions &amp; Best Price Lifts in Ahmedabad:</h2>
-      <ul>
-        <li><a href="/products/elevators/passenger">Affordable Passenger Elevator at Best Price in Ahmedabad</a> — Low, mid &amp; high-rise residential apartments and commercial towers.</li>
-        <li><a href="/products/elevators/home">Affordable Home Villa Elevator at Best Price in Ahmedabad</a> — Compact single-phase 220V plug-and-play bungalow lift requiring only 550mm pit depth.</li>
-        <li><a href="/products/elevators/capsule">Best Price Capsule Panoramic Glass Elevator in Ahmedabad</a> — Architectural curved glass showpiece for atriums, malls, and luxury resorts.</li>
-        <li><a href="/products/elevators/hospital">Affordable Hospital Stretcher Elevator at Best Price in Ahmedabad</a> — Jerk-free patient bed lift with priority emergency medical recall.</li>
-        <li><a href="/products/elevators/goods">Affordable Goods &amp; Freight Elevator at Best Price in Ahmedabad</a> — Rugged heavy-tonnage industrial freight lift manufactured in Kathwada GIDC.</li>
-        <li><a href="/products/elevators/mrl">Affordable MRL (Machine Room Less) Elevator at Best Price in Ahmedabad</a> — Eliminates penthouse machine room, saving 40% building space.</li>
-        <li><a href="/products/elevators/hydraulic">Affordable Hydraulic Elevator at Best Price in Ahmedabad</a> — Zero overhead machine room required, flexible power pack placement.</li>
-        <li><a href="/products/elevators/car">Affordable Car Elevator &amp; Multi-Level Parking at Best Price in Ahmedabad</a> — Heavy-capacity vehicle transport up to 5000 kg.</li>
-      </ul>
-      <p>
-        Manufacturing Works: 1, Heritage Industrial Hub, Kathwada GIDC Road No 5, Ahmedabad-382430, Gujarat, India.<br />
-        Contact: +91 82008 59171 | Email: info@krupaelevators.com | Website: www.krupaelevators.com
-      </p>
-    </div>
-  </noscript>
-
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

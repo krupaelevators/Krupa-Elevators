@@ -45,6 +45,7 @@ export default function DoorDetail() {
       <Seo
         title={door.name}
         description={door.summary.slice(0, 155)}
+        image={door.image}
       />
 
       {/* ========================================================================= */}

@@ -17,6 +17,7 @@ import {
 import { elevatorMaster } from "../data/elevatorMaster";
 import { companyData } from "../data/companyData";
 import Seo from "../components/common/Seo";
+import { absoluteUrl } from "../config/site";
 import PageHero from "../components/common/PageHero";
 import CTASection from "../components/common/CTASection";
 import ScrollReveal from "../components/ScrollReveal";
@@ -35,7 +36,7 @@ export default function ElevatorsIndex() {
           "@type": "ListItem",
           position: index + 1,
           name: elev.seoName || elev.name,
-          url: `https://www.krupaelevators.com/products/elevators/${elev.id}`
+          url: absoluteUrl(`/products/elevators/${elev.id}`)
         }))
       },
       {
@@ -45,13 +46,13 @@ export default function ElevatorsIndex() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.krupaelevators.com/"
+            "item": absoluteUrl("/")
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Elevator Models",
-            "item": "https://www.krupaelevators.com/products/elevators"
+            "item": absoluteUrl("/products/elevators")
           }
         ]
       }

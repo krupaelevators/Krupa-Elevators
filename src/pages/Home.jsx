@@ -27,6 +27,7 @@ import { ahmedabadElevatorFaqs } from "../data/elevatorSeoData";
 import ScrollReveal from "../components/ScrollReveal";
 import { assetUrl, webpUrl } from "../utils/assetPath";
 import Seo from "../components/common/Seo";
+import { absoluteUrl } from "../config/site";
 import CTASection from "../components/common/CTASection";
 import LiftEstimatorWizard from "../components/LiftEstimatorWizard";
 import OwnershipPolicySection from "../components/common/OwnershipPolicySection";
@@ -118,7 +119,7 @@ export default function Home({ onOpenBrochure }) {
     "@graph": [
       {
         "@type": ["LocalBusiness", "ManufacturingBusiness"],
-        "@id": "https://www.krupaelevators.com/#localbusiness",
+        "@id": absoluteUrl("/#localbusiness"),
         name: "KRUPA ELEVATORS",
         alternateName: [
           "Krupa Elevators Ahmedabad",
@@ -127,7 +128,7 @@ export default function Home({ onOpenBrochure }) {
         ],
         description:
           "KRUPA ELEVATORS is the #1 best elevator company and premier manufacturing plant in Ahmedabad, Gujarat. Direct manufacturer of affordable passenger, home villa, capsule, hospital, goods, car, MRL, and hydraulic elevators with factory-direct best price guarantee and 100% monopoly-free AMC.",
-        url: "https://www.krupaelevators.com/",
+        url: absoluteUrl("/"),
         telephone: "+918200859171",
         email: "info@krupaelevators.com",
         priceRange: "₹₹ (Affordable Direct Factory Best Price)",
@@ -233,7 +234,7 @@ export default function Home({ onOpenBrochure }) {
                   alt={scene.title}
                   width="1376"
                   height="768"
-                  fetchPriority={index === 0 ? "high" : "low"}
+                  fetchpriority={index === 0 ? "high" : "low"}
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding={index === 0 ? "sync" : "async"}
                   className="absolute inset-0 w-full h-full object-cover object-right md:object-center"

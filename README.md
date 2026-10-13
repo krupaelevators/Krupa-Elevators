@@ -8,13 +8,13 @@
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![React Router](https://img.shields.io/badge/React_Router-v6-CA4245?style=flat&logo=react-router&logoColor=white)](https://reactrouter.com/)
 [![License](https://img.shields.io/badge/License-Proprietary-slate.svg)](#-license--copyright)
-[![Live Demo](https://img.shields.io/badge/Live_Showroom-GitHub_Pages-teal.svg?style=flat&logo=github)](https://vyom1912.github.io/KrupaElevator/)
+[![Website](https://img.shields.io/badge/Live-krupaelevators.com-teal.svg?style=flat&logo=vercel)](https://krupaelevators.com/)
 
 ---
 
 ## 🌐 Live Digital Showroom
 
-🔗 **[https://vyom1912.github.io/KrupaElevator/](https://vyom1912.github.io/KrupaElevator/)**
+🔗 **[https://krupaelevators.com](https://krupaelevators.com/)**
 
 Official interactive web application and technical digital showroom for **KRUPA ELEVATORS**. Engineered as a modern 18-page architectural portal featuring complete on-site civil dimension matrices, interactive technical drawing viewers, cabin configurator, lift estimator wizard, full technical brochure viewer, and direct engineering inquiry channels.
 
@@ -27,10 +27,10 @@ Official interactive web application and technical digital showroom for **KRUPA 
 Our systems integrate German-engineered V3F closed-loop vector drives, green Permanent Magnet Synchronous (PMS) gearless traction machines, 32-bit microprocessor control systems, and fail-safe Automatic Rescue Devices (ARD) for optimal ride comfort, energy efficiency, and passenger safety.
 
 ### Corporate Directory
-- **Manufacturing Plant**: 353, Gopal Charan Industrial Hub, Kujad-Bakrol Road, Bakrol, Ahmedabad – 382430, Gujarat, India
+- **Manufacturing Plant**: 1, Heritage Industrial Hub, Nr. Global Industrial Estate, Nr. Kotak Mahindra Bank, Kathwada GIDC Road No 5, Ahmedabad – 382430, Gujarat, India
 - **Technical Hotline**: +91 82008 59171 / +91 97277 64868
 - **Email**: `sales@krupaelevators.com` / `info@krupaelevators.com`
-- **Web Portal**: [www.krupaelevators.com](https://www.krupaelevators.com)
+- **Web Portal**: [krupaelevators.com](https://krupaelevators.com)
 - **WhatsApp Support**: [+91 97277 64868](https://wa.me/919727764868)
 
 ---
@@ -43,14 +43,14 @@ The platform catalogs Krupa's complete vertical transportation portfolio across 
 
 | Model ID | Elevator Class | Target Architecture | Capacity & Speed | Standard Compliance |
 | :--- | :--- | :--- | :--- | :--- |
-| [`passenger`](https://vyom1912.github.io/KrupaElevator/products/elevators/passenger) | **Passenger Elevator** | Residential apartments & corporate office towers | 4 to 26 Persons (272–1768 kg)<br>0.63 to 2.0 m/s | — |
-| [`capsule`](https://vyom1912.github.io/KrupaElevator/products/elevators/capsule) | **Capsule / Panoramic** | Shopping malls, luxury hotels & glass atriums | Semi-circular & polygon glass<br>0.63 to 1.5 m/s | Architectural |
-| [`hospital`](https://vyom1912.github.io/KrupaElevator/products/elevators/hospital) | **Hospital / Stretcher** | Multi-speciality hospitals & surgical clinics | 15 to 26 Persons (1020–1768 kg)<br>Deep 2400mm ICU bed clearance | Healthcare / EMC Shielded |
-| [`goods`](https://vyom1912.github.io/KrupaElevator/products/elevators/goods) | **Goods & Freight** | Industrial manufacturing, warehouses & logistics | 500 kg to 4000 kg<br>Heavy axle load structural steel | Industrial Heavy-Duty |
-| [`car`](https://vyom1912.github.io/KrupaElevator/products/elevators/car) | **Automobile / Car** | Multi-level vehicle parking & showrooms | 2500 kg to 4000 kg<br>Drive-through front/rear doors | Heavy Automobile Class |
-| [`mrl`](https://vyom1912.github.io/KrupaElevator/products/elevators/mrl) | **MRL (Machine Room-Less)** | Contemporary structures with height restrictions | 6 to 13 Persons (408–884 kg)<br>Zero roof penthouse required | Eco & Compact Hoistway |
-| [`home`](https://vyom1912.github.io/KrupaElevator/products/elevators/home) | **Private Villa / Home Lift** | Private bungalows, duplexes & penthouses | 3 to 6 Persons (225–450 kg)<br>Single-Phase 220V, 550mm pit | Luxury Residential |
-| [`hydraulic`](https://vyom1912.github.io/KrupaElevator/products/elevators/hydraulic) | **Hydraulic Elevator** | Low-rise buildings & heavy industrial hoists | Direct & 1:2 roped cylinders<br>Flexible power unit location | Low-Headroom Application |
+| [`passenger`](https://krupaelevators.com/products/elevators/passenger) | **Passenger Elevator** | Residential apartments & corporate office towers | 4 to 26 Persons (272–1768 kg)<br>0.63 to 2.0 m/s | — |
+| [`capsule`](https://krupaelevators.com/products/elevators/capsule) | **Capsule / Panoramic** | Shopping malls, luxury hotels & glass atriums | Semi-circular & polygon glass<br>0.63 to 1.5 m/s | Architectural |
+| [`hospital`](https://krupaelevators.com/products/elevators/hospital) | **Hospital / Stretcher** | Multi-speciality hospitals & surgical clinics | 15 to 26 Persons (1020–1768 kg)<br>Deep 2400mm ICU bed clearance | Healthcare / EMC Shielded |
+| [`goods`](https://krupaelevators.com/products/elevators/goods) | **Goods & Freight** | Industrial manufacturing, warehouses & logistics | 500 kg to 4000 kg<br>Heavy axle load structural steel | Industrial Heavy-Duty |
+| [`car`](https://krupaelevators.com/products/elevators/car) | **Automobile / Car** | Multi-level vehicle parking & showrooms | 2500 kg to 4000 kg<br>Drive-through front/rear doors | Heavy Automobile Class |
+| [`mrl`](https://krupaelevators.com/products/elevators/mrl) | **MRL (Machine Room-Less)** | Contemporary structures with height restrictions | 6 to 13 Persons (408–884 kg)<br>Zero roof penthouse required | Eco & Compact Hoistway |
+| [`home`](https://krupaelevators.com/products/elevators/home) | **Private Villa / Home Lift** | Private bungalows, duplexes & penthouses | 3 to 6 Persons (225–450 kg)<br>Single-Phase 220V, 550mm pit | Luxury Residential |
+| [`hydraulic`](https://krupaelevators.com/products/elevators/hydraulic) | **Hydraulic Elevator** | Low-rise buildings & heavy industrial hoists | Direct & 1:2 roped cylinders<br>Flexible power unit location | Low-Headroom Application |
 
 ---
 
@@ -163,7 +163,11 @@ The application is structured as a client-side routed Single Page Application (S
 krupa-elevators-react/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml              # GitHub Actions automated Pages deployment
+│       └── deploy.yml              # Publishes deploy/github-pages-redirect to the old GitHub Pages URL
+├── deploy/
+│   └── github-pages-redirect/      # Redirects old *.github.io links to krupaelevators.com
+├── scripts/
+│   └── prerender.mjs               # Build step: per-page HTML, sitemap.xml, llms.txt, 404.html
 ├── public/
 │   ├── assets/
 │   │   ├── doors/                  # Automatic & manual door photography
@@ -175,7 +179,8 @@ krupa-elevators-react/
 │   │   ├── technologies/           # Motors, inverters, and ARD hardware
 │   │   ├── krupa-brochure.pdf      # Complete official technical brochure PDF
 │   │   └── logo.jpg                # Krupa Elevators brand mark
-│   └── 404.html                    # GitHub Pages SPA redirect fallback handler
+│   ├── robots.txt                  # Crawler rules (search engines + AI assistants)
+│   └── site.webmanifest            # PWA manifest & icons
 ├── src/
 │   ├── components/
 │   │   ├── common/
@@ -247,10 +252,10 @@ krupa-elevators-react/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Vyom1912/KrupaElevator.git
+git clone https://github.com/krupaelevators/Krupa-Elevators.git
 
 # 2. Enter project root
-cd KrupaElevator
+cd Krupa-Elevators
 
 # 3. Install npm dependencies
 npm install
@@ -259,12 +264,12 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173/KrupaElevator/` in your browser to view the application.
+Open `http://localhost:3000/` in your browser to view the application.
 
 ### Build for Production
 
 ```bash
-# Generate optimized static bundle in /dist
+# Build the bundle and prerender every page into /dist
 npm run build
 
 # Preview the production build locally
@@ -273,18 +278,17 @@ npm run preview
 
 ---
 
-## 🚀 Deployment (GitHub Pages)
+## 🚀 Deployment (Vercel)
 
-The repository is configured for automated continuous deployment using **GitHub Actions**:
+The site is hosted on **Vercel** at **https://krupaelevators.com**. Every push to `main` deploys automatically. Settings live in [`vercel.json`](vercel.json).
 
-1. **Repository Settings**:
-   - Navigate to `https://github.com/Vyom1912/KrupaElevator/settings/pages`.
-   - Under **Build and deployment > Source**, ensure **`GitHub Actions`** is selected.
-2. **Automated Pipeline**:
-   - Any commit pushed to the `main` branch automatically triggers `.github/workflows/deploy.yml`.
-   - The workflow runs `npm ci`, compiles the production bundle with base path `/KrupaElevator/`, and deploys the build artifact to GitHub Pages.
-3. **SPA Routing Support**:
-   - A `public/404.html` fallback script captures client-side sub-routes upon hard refresh or direct URL entry, redirecting cleanly to the React Router context without 404 errors.
+1. **Build**: `npm run build` runs three steps:
+   - `vite build`: the browser bundle.
+   - `vite build --ssr src/entry-server.jsx`: a server copy of the app, used only during the build.
+   - `node scripts/prerender.mjs`: renders every route to static HTML, with its own `<title>`, description, canonical URL, Open Graph/Twitter tags and JSON-LD. It also writes `sitemap.xml` (with every image on each page), `llms.txt` and `404.html`. In the browser, React hydrates that HTML.
+2. **Adding pages**: new elevators, doors and interior models come from `src/data/*` and are picked up automatically. For a brand-new route, also add it to the `routes` list in `src/entry-server.jsx`.
+3. **Domain**: the canonical address is `https://krupaelevators.com`, set in `src/config/site.js`. `vercel.json` sends `www.` to it with a 301 redirect. It also 301-redirects the legacy paths (`/elevators`, `/projects`, the old `/Krupa-Elevators/...` paths and others).
+4. **Old GitHub Pages URL**: `.github/workflows/deploy.yml` publishes `deploy/github-pages-redirect/` to `krupaelevators.github.io/Krupa-Elevators`, so old links land on the matching page of the new domain.
 
 ---
 

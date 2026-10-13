@@ -13,7 +13,7 @@ export const companyData = {
     // whatsapp: "916353344875",
     emailPrimary: "info@krupaelevators.com",
     emailSales: "sales@krupaelevators.com",
-    website: "www.krupaelevators.com",
+    website: "krupaelevators.com",
     factory: {
       title: "Manufacturing Works",
       address: "1, Heritage Industrial Hub, Nr. Global Industrial Estate, Nr. Kotak Mahindra Bank, Kathwada GIDC Road No 5, Ahmedabad-382430, Gujarat, India",

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation, useParams, Navigate } from "react-router-dom";
+import { Routes, Route, useLocation, useParams, Navigate } from "react-router-dom";
 import { Phone } from "lucide-react";
 import WhatsAppIcon from "./components/common/WhatsAppIcon";
 import Navbar from "./components/Navbar";
@@ -95,9 +95,7 @@ function ScrollToTop() {
   // Clean legacy '#' hashes from old cached/bookmarked URLs (e.g. #/elevators -> /elevators)
   useEffect(() => {
     if (window.location.hash.startsWith("#/")) {
-      const cleanSubpath = window.location.hash.slice(2);
-      const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
-      window.history.replaceState(null, "", (base ? base : "") + "/" + cleanSubpath);
+      window.history.replaceState(null, "", "/" + window.location.hash.slice(2));
     }
   }, []);
 
@@ -126,7 +124,7 @@ export default function App() {
   };
 
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-slate-50 font-sans antialiased text-slate-900">
         <Navbar onOpenBrochure={() => handleOpenBrochure(1)} />
@@ -285,6 +283,6 @@ export default function App() {
           </a>
         </div>
       </div>
-    </Router>
+    </>
   );
 }

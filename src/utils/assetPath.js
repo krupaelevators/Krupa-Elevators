@@ -1,7 +1,7 @@
 /**
  * assetUrl helper
- * Ensures asset paths always include the correct base path, whether running
- * locally (/) or on GitHub Pages (/KrupaElevator/).
+ * Ensures asset paths always include the app's base path (import.meta.env.BASE_URL,
+ * currently "/"), so the site can be moved under a sub-path without touching data files.
  */
 export function assetUrl(path) {
   if (!path) return "";

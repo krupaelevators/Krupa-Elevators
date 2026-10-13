@@ -79,6 +79,7 @@ export default function InteriorDetail({ onOpenBrochure }) {
       <Seo
         title={model.name}
         description={model.clientOverview.slice(0, 155)}
+        image={model.image}
       />
 
       {/* ========================================================================= */}
