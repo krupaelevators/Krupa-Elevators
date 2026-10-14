@@ -172,12 +172,7 @@ export default function Home({ onOpenBrochure }) {
           "Rajkot",
           "Gujarat",
           "India"
-        ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.9",
-          reviewCount: "142"
-        }
+        ]
       },
       {
         "@type": "FAQPage",
