@@ -2,12 +2,14 @@ import { createContext, useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { SITE_NAME, absoluteUrl } from "../../config/site";
 
-const DEFAULT_TITLE = "Best Elevator Company in Ahmedabad | Top Manufacturing Plant & Affordable Lifts";
+const DEFAULT_TITLE = "Elevator Manufacturer in Ahmedabad";
 const DEFAULT_DESC =
-  "KRUPA ELEVATORS is the #1 best elevator company and top manufacturing plant in Ahmedabad, Gujarat. Direct manufacturer of affordable passenger, home, capsule, hospital, goods, car, MRL and hydraulic elevators with factory-direct best price guarantee.";
+  "Factory-direct passenger, home, goods, hospital & MRL elevators from our Kathwada GIDC plant. Installation, modernization & AMC across Gujarat.";
 const DEFAULT_KEYWORDS =
   "best elevator company in Ahmedabad, elevator manufacturing plant Ahmedabad, affordable elevator solution, best price lift in Ahmedabad, passenger elevator manufacturer Ahmedabad, home lift price Ahmedabad, capsule elevator Gujarat, goods lift Kathwada GIDC, MRL elevator Ahmedabad, hydraulic lift manufacturer, elevator AMC Ahmedabad";
-const DEFAULT_IMAGE = absoluteUrl("/assets/hero/building.jpg");
+// Branded link-preview card (WhatsApp, Facebook, LinkedIn, X); pages without their own image use it.
+const DEFAULT_IMAGE = absoluteUrl("/metaImage.jpg");
+const DEFAULT_IMAGE_SIZE = { width: 840, height: 441 };
 
 /**
  * During the build-time prerender (src/entry-server.jsx) this context holds an
@@ -28,6 +30,7 @@ export function resolveSeo({ title, description, keywords, image, type, path, sc
     description: description || DEFAULT_DESC,
     keywords: keywords || DEFAULT_KEYWORDS,
     image: image ? absoluteUrl(image) : DEFAULT_IMAGE,
+    imageSize: image ? null : DEFAULT_IMAGE_SIZE,
     type: type || "website",
     canonical: absoluteUrl(path || pathname || "/"),
     schema: schema || null,
@@ -87,7 +90,7 @@ export default function Seo(props) {
   // Prerender: hand the values to entry-server.jsx (effects don't run on the server).
   if (collector) collector.seo = seo;
 
-  const { title, description, keywords, image, type, canonical, schema } = seo;
+  const { title, description, keywords, image, imageSize, type, canonical, schema } = seo;
 
   useEffect(() => {
     document.title = title;
@@ -98,6 +101,13 @@ export default function Seo(props) {
     upsertMeta("property", "og:title", title);
     upsertMeta("property", "og:description", description);
     upsertMeta("property", "og:image", image);
+    // Stale dimensions would describe the wrong image, so drop them for page-specific images.
+    if (imageSize) {
+      upsertMeta("property", "og:image:width", String(imageSize.width));
+      upsertMeta("property", "og:image:height", String(imageSize.height));
+    } else {
+      document.querySelectorAll('meta[property="og:image:width"], meta[property="og:image:height"]').forEach((t) => t.remove());
+    }
     upsertMeta("property", "og:type", type);
     upsertMeta("property", "og:site_name", SITE_NAME);
     upsertMeta("property", "og:url", canonical);
@@ -115,7 +125,7 @@ export default function Seo(props) {
       const script = document.getElementById("dynamic-route-schema");
       if (script) script.remove();
     };
-  }, [title, description, keywords, image, type, canonical, schema]);
+  }, [title, description, keywords, image, imageSize, type, canonical, schema]);
 
   return null;
 }

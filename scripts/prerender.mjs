@@ -39,6 +39,8 @@ function headFor(seo, { noindex = false } = {}) {
     `<meta property="og:title" content="${esc(seo.title)}" />`,
     `<meta property="og:description" content="${esc(seo.description)}" />`,
     `<meta property="og:image" content="${esc(seo.image)}" />`,
+    seo.imageSize ? `<meta property="og:image:width" content="${seo.imageSize.width}" />` : "",
+    seo.imageSize ? `<meta property="og:image:height" content="${seo.imageSize.height}" />` : "",
     `<meta property="og:image:alt" content="${esc(seo.title)}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:url" content="${esc(seo.canonical)}" />`,

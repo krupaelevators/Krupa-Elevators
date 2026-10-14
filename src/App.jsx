@@ -252,14 +252,14 @@ export default function App() {
         <div className="flex fixed bottom-4 right-4 sm:bottom-6 sm:right-6 mb-[env(safe-area-inset-bottom)] z-40 flex-col items-end space-y-3">
           {/* Quick Call Button */}
           <a
-            href="tel:+919727764868"
+            href="tel:+918200859171"
             className="group relative flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 hover:bg-brand-teal text-white shadow-lg border border-slate-700/60 transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-hidden focus:ring-4 focus:ring-brand-teal/40"
-            title="Call Technical Desk: +91 97277 64868"
+            title="Call Technical Desk: +91 82008 59171"
             aria-label="Call Krupa Elevators"
           >
             <Phone className="w-5 h-5 text-brand-teal group-hover:text-white transition-colors" />
             <span className="absolute right-14 px-3 py-1.5 rounded-xl bg-slate-900/95 text-white text-xs font-semibold whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-md border border-slate-700/50">
-              Call: +91 97277 64868
+              Call: +91 82008 59171
             </span>
           </a>
 

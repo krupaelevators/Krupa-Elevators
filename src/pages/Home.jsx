@@ -191,8 +191,8 @@ export default function Home({ onOpenBrochure }) {
   return (
     <div className="space-y-16 sm:space-y-24 pb-20 overflow-x-hidden">
       <Seo
-        title="Best Elevator Company in Ahmedabad | Top Manufacturing Plant & Affordable Lifts"
-        description="KRUPA ELEVATORS is the #1 best elevator company and premier manufacturing plant in Ahmedabad, Gujarat. Direct manufacturer of affordable passenger, home villa, capsule, hospital, goods, car, MRL and hydraulic elevators with factory-direct best price guarantee and 100% monopoly-free AMC."
+        title="KRUPA ELEVATORS | Elevator Manufacturer in Ahmedabad"
+        description="Factory-direct passenger, home, goods, hospital & MRL elevators from our Kathwada GIDC plant. Installation, modernization & AMC across Gujarat."
         keywords="best elevator company in Ahmedabad, best manufacturing plant, affordable elevator solution, best price lift in Ahmedabad, elevator manufacturers in Ahmedabad, passenger elevator Ahmedabad best price, home lift Ahmedabad affordable, capsule elevator Gujarat, goods lift Kathwada GIDC, MRL elevator manufacturer, elevator AMC Ahmedabad"
         schema={homeSchema}
       />

@@ -11,7 +11,7 @@ export default function PageHero({
   title,
   tagline,
   description,
-  phone = "+91 97277 64868",
+  phone = "+91 82008 59171",
   whatsappMessage,
   actions,
   media,

@@ -181,7 +181,7 @@ export default function Contact({ onOpenBrochure }) {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 pb-12">
+    <div className="min-h-screen bg-slate-50 pb-12 ">
       <Seo
         title="Get Best Price Elevator Quote | Best Elevator Company in Ahmedabad"
         description="Contact Krupa Elevators — rated #1 best elevator company in Ahmedabad. Request a free site survey, custom AutoCAD hoistway layout, or affordable elevator quotation direct from our Kathwada manufacturing plant."
@@ -198,117 +198,117 @@ export default function Contact({ onOpenBrochure }) {
       />
 
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 mt-12">
         {/* Facilities & Quick Contacts Cards */}
         <div className="space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-slate-500">
-            Facilities & Quick Contacts
-          </span>
-          <Link
-            to="/about"
-            className="inline-flex items-center gap-1 text-xs font-bold text-brand-teal hover:text-teal-700"
-          >
-            <span>View full company & facilities info</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Manufacturing Works — compact; full facility detail lives on /about */}
-          <ScrollReveal direction="up" distance={18} delay={60} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3 hover:shadow-lg transition-all flex flex-col justify-between">
-            <div className="space-y-2">
-              <div className="w-10 h-10 rounded-2xl bg-brand-teal-light text-brand-teal flex items-center justify-center">
-                <Factory className="w-5 h-5" />
-              </div>
-              <strong className="text-sm font-black text-slate-900 block">{companyData.contacts.factory.title}</strong>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                {companyData.contacts.factory.address}
-              </p>
-              <a
-                href={`tel:${companyData.contacts.phoneRaw}`}
-                className="block text-xs font-bold text-slate-800 hover:text-brand-teal"
-              >
-                {companyData.contacts.phone}
-              </a>
-            </div>
-            <div className="pt-2 border-t border-slate-100 text-[11px] text-slate-400">
-              Visitors welcome by appointment
-            </div>
-          </ScrollReveal>
-
-          {/* Phone & WhatsApp */}
-          <ScrollReveal direction="up" distance={18} delay={120} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 hover:shadow-lg transition-all flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                <Phone className="w-5 h-5" />
-              </div>
-              <strong className="text-sm font-black text-slate-900 block">Phone & Direct Contact</strong>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Connect directly with our engineering coordinators for quick dimensional inquiries and price estimates.
-              </p>
-              <div className="space-y-1.5 text-xs pt-1">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-3">
+            <span className="text-xs font-bold uppercase tracking-widest text-slate-500">
+              Facilities & Quick Contacts
+            </span>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-1 text-xs font-bold text-brand-teal hover:text-teal-700"
+            >
+              <span>View full company & facilities info</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Manufacturing Works — compact; full facility detail lives on /about */}
+            <ScrollReveal direction="up" distance={18} delay={60} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div className="space-y-2">
+                <div className="w-10 h-10 rounded-2xl bg-brand-teal-light text-brand-teal flex items-center justify-center">
+                  <Factory className="w-5 h-5" />
+                </div>
+                <strong className="text-sm font-black text-slate-900 block">{companyData.contacts.factory.title}</strong>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {companyData.contacts.factory.address}
+                </p>
                 <a
                   href={`tel:${companyData.contacts.phoneRaw}`}
-                  className="block font-black text-sm text-slate-900 hover:text-brand-orange transition-colors"
+                  className="block text-xs font-bold text-slate-800 hover:text-brand-teal"
                 >
                   {companyData.contacts.phone}
                 </a>
-                <span className="text-[11px] text-slate-400 block">24/7 Breakdown: +91 82008 59171</span>
               </div>
-            </div>
-
-            <div className="pt-3 border-t border-slate-100">
-              <a
-                href={`https://wa.me/${companyData.contacts.whatsapp}?text=Hi%20KRUPA%20Elevators%2C%20I%20would%20like%20to%20inquire%20about%20your%20elevators.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2.5 px-3 rounded-xl bg-emerald-50 text-emerald-700 hover:bg-emerald-100 text-xs font-bold transition-colors flex items-center justify-center space-x-1.5"
-              >
-                <MessageSquare className="w-4 h-4 text-emerald-600" />
-                <span>Chat on WhatsApp</span>
-              </a>
-            </div>
-          </ScrollReveal>
-
-          {/* Email & Inquiries */}
-          <ScrollReveal direction="up" distance={18} delay={180} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 hover:shadow-lg transition-all flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                <Mail className="w-5 h-5" />
+              <div className="pt-2 border-t border-slate-100 text-[11px] text-slate-400">
+                Visitors welcome by appointment
               </div>
-              <strong className="text-sm font-black text-slate-900 block">Corporate Email Desk</strong>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Send structural CAD drawings, tender specifications, and architectural requirements to our team.
-              </p>
-              <div className="space-y-1 text-xs pt-1">
+            </ScrollReveal>
+
+            {/* Phone & WhatsApp */}
+            <ScrollReveal direction="up" distance={18} delay={120} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <strong className="text-sm font-black text-slate-900 block">Phone & Direct Contact</strong>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Connect directly with our engineering coordinators for quick dimensional inquiries and price estimates.
+                </p>
+                <div className="space-y-1.5 text-xs pt-1">
+                  <a
+                    href={`tel:${companyData.contacts.phoneRaw}`}
+                    className="block font-black text-sm text-slate-900 hover:text-brand-orange transition-colors"
+                  >
+                    {companyData.contacts.phone}
+                  </a>
+                  <span className="text-[11px] text-slate-400 block">24/7 Breakdown: +91 82008 59171</span>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-slate-100">
                 <a
-                  href={`mailto:${companyData.contacts.emailPrimary}`}
-                  className="block text-slate-800 font-bold hover:text-brand-teal truncate"
+                  href={`https://wa.me/${companyData.contacts.whatsapp}?text=Hi%20KRUPA%20Elevators%2C%20I%20would%20like%20to%20inquire%20about%20your%20elevators.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2.5 px-3 rounded-xl bg-emerald-50 text-emerald-700 hover:bg-emerald-100 text-xs font-bold transition-colors flex items-center justify-center space-x-1.5"
                 >
-                  {companyData.contacts.emailPrimary}
-                </a>
-                <a
-                  href={`mailto:${companyData.contacts.emailSales}`}
-                  className="block text-slate-600 hover:text-brand-teal truncate"
-                >
-                  {companyData.contacts.emailSales}
+                  <MessageSquare className="w-4 h-4 text-emerald-600" />
+                  <span>Chat on WhatsApp</span>
                 </a>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="pt-3 border-t border-slate-100">
-              <a
-                href={companyData.brochurePdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors flex items-center justify-center space-x-1.5"
-              >
-                <Download className="w-4 h-4 text-brand-teal" />
-                <span>Download PDF Brochure</span>
-              </a>
-            </div>
-          </ScrollReveal>
-        </div>
+            {/* Email & Inquiries */}
+            <ScrollReveal direction="up" distance={18} delay={180} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <strong className="text-sm font-black text-slate-900 block">Corporate Email Desk</strong>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Send structural CAD drawings, tender specifications, and architectural requirements to our team.
+                </p>
+                <div className="space-y-1 text-xs pt-1">
+                  <a
+                    href={`mailto:${companyData.contacts.emailPrimary}`}
+                    className="block text-slate-800 font-bold hover:text-brand-teal truncate"
+                  >
+                    {companyData.contacts.emailPrimary}
+                  </a>
+                  <a
+                    href={`mailto:${companyData.contacts.emailSales}`}
+                    className="block text-slate-600 hover:text-brand-teal truncate"
+                  >
+                    {companyData.contacts.emailSales}
+                  </a>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-slate-100">
+                <a
+                  href={companyData.brochurePdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors flex items-center justify-center space-x-1.5"
+                >
+                  <Download className="w-4 h-4 text-brand-teal" />
+                  <span>Download PDF Brochure</span>
+                </a>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
 
         {/* INQUIRY FORM & SITE VISIT REQUEST */}
