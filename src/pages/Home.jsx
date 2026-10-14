@@ -93,25 +93,30 @@ const heroScenes = [
 
 export default function Home({ onOpenBrochure }) {
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
-  const [loadAllScenes, setLoadAllScenes] = useState(false);
+  const [loadedIndices, setLoadedIndices] = useState([0]);
   const [activeFaq, setActiveFaq] = useState(0);
   const [faqCategory, setFaqCategory] = useState("all");
 
   // Hero carousel timer — 5.5 s per slide
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentHeroIndex((prev) => (prev + 1) % heroScenes.length);
+      setCurrentHeroIndex((prev) => {
+        const next = (prev + 1) % heroScenes.length;
+        setLoadedIndices((loaded) => (loaded.includes(next) ? loaded : [...loaded, next]));
+        return next;
+      });
     }, 5500);
     return () => clearInterval(timer);
   }, []);
 
-  // Defer non-critical carousel slides until initial paint and LCP complete
+  // Preload the next upcoming slide 2.0s before transition, never flooding the network on initial load
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoadAllScenes(true);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
+    const preloadTimer = setTimeout(() => {
+      const nextIndex = (currentHeroIndex + 1) % heroScenes.length;
+      setLoadedIndices((prev) => (prev.includes(nextIndex) ? prev : [...prev, nextIndex]));
+    }, 3500);
+    return () => clearTimeout(preloadTimer);
+  }, [currentHeroIndex]);
 
   // Enterprise Schema for LocalBusiness, ManufacturingPlant & FAQPage (Google Rich Snippets)
   const homeSchema = {
@@ -211,8 +216,9 @@ export default function Home({ onOpenBrochure }) {
             Both image and text dissolve together for a seamless blend.          */}
         {heroScenes.map((scene, index) => {
           const isActive = index === currentHeroIndex;
-          // Defer rendering non-active slides during initial paint to ensure instant LCP
-          if (!loadAllScenes && index !== 0 && !isActive) {
+          const isLoaded = loadedIndices.includes(index);
+          // Render only active slide and preloaded upcoming slide to avoid channelling 700KB+ of images at once
+          if (!isLoaded && !isActive) {
             return null;
           }
           return (
@@ -246,7 +252,7 @@ export default function Home({ onOpenBrochure }) {
 
               {/* Foreground text content — sits on top of the gradient */}
               <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-6 sm:py-8">
-                <div className="max-w-[50rem] space-y-4 sm:space-y-5">
+                <div className="max-w-[50rem] space-y-4 sm:space-y-5 min-h-[300px] sm:min-h-[320px] flex flex-col justify-center">
 
                   {/* Category tag & Rank #1 Trust Badge */}
                   <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
@@ -299,7 +305,7 @@ export default function Home({ onOpenBrochure }) {
                       onClick={() => {
                         document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" });
                       }}
-                      className="w-full sm:w-auto justify-center px-5 py-3 rounded-xl bg-brand-orange hover:bg-brand-orange-hover text-white text-xs sm:text-sm font-bold shadow-lg shadow-brand-orange/20 transition-all flex items-center space-x-2 cursor-pointer text-center"
+                      className="w-full sm:w-auto justify-center px-5 py-3 rounded-xl bg-brand-orange hover:bg-brand-orange-hover text-white text-sm sm:text-base font-bold shadow-lg shadow-brand-orange/20 transition-all flex items-center space-x-2 cursor-pointer text-center"
                     >
                       <span>Submit Query / Get Quote</span>
                     </button>
@@ -341,7 +347,10 @@ export default function Home({ onOpenBrochure }) {
           {heroScenes.map((scene, idx) => (
             <button
               key={scene.id}
-              onClick={() => setCurrentHeroIndex(idx)}
+              onClick={() => {
+                setLoadedIndices((prev) => (prev.includes(idx) ? prev : [...prev, idx]));
+                setCurrentHeroIndex(idx);
+              }}
               className="p-2 transition-all cursor-pointer focus:outline-none"
               title={scene.title}
               aria-label={`Go to ${scene.title}`}
@@ -415,7 +424,7 @@ export default function Home({ onOpenBrochure }) {
         <div className="border-t border-b border-slate-200 divide-y md:divide-y-0 md:divide-x divide-slate-200 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 py-1.5">
           {companyData.pillars.map((pillar, idx) => (
             <div key={pillar.title} className="p-3 lg:p-6 space-y-2 group transition-all duration-300 hover:bg-slate-50/60">
-              <span className="font-mono text-[10px] font-bold text-slate-400 group-hover:text-brand-teal transition-colors">
+              <span className="font-mono text-[10px] font-bold text-slate-600 group-hover:text-brand-teal transition-colors">
                 0{idx + 1}
               </span>
               <h3 className="text-base font-black text-slate-900 group-hover:text-brand-teal transition-colors">
