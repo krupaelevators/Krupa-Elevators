@@ -477,30 +477,35 @@ export default function Technologies() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                  <div className="w-8 h-8 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center">
-                    <ShieldCheck className="w-4 h-4" />
-                  </div>
-                  <h4 className="font-black text-sm text-slate-900">Inbuilt Car Door Lock (CDL)</h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <div className="flex gap-3 items-center">
+                    <div className="w-8 h-8 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center">
+                      <ShieldCheck className="w-4 h-4" />
+                    </div>
+                    <h4 className="font-black text-sm text-slate-900">Inbuilt Car Door Lock (CDL)</h4>
+                  </div>  <p className="text-xs text-slate-600 leading-relaxed">
                     Prevents cabin doors from being forced open from inside while the elevator is in motion or outside the leveling zone.
                   </p>
                 </div>
 
                 <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                  <div className="w-8 h-8 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center">
-                    <Zap className="w-4 h-4" />
+                  <div className="flex gap-3 items-center">
+                    <div className="w-8 h-8 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center">
+                      <Zap className="w-4 h-4" />
+                    </div>
+                    <h4 className="font-black text-sm text-slate-900">128+ Beam Infrared Light Curtain</h4>
                   </div>
-                  <h4 className="font-black text-sm text-slate-900">128+ Beam Infrared Light Curtain</h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     Continuous cross-beams protect passengers from floor to 1800 mm, reversing doors instantly before any physical touch.
                   </p>
                 </div>
 
                 <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                  <div className="w-8 h-8 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center">
-                    <BatteryCharging className="w-4 h-4" />
+                  <div className="flex gap-3 items-center">
+                    <div className="w-8 h-8 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center">
+                      <BatteryCharging className="w-4 h-4" />
+                    </div>
+                    <h4 className="font-black text-sm text-slate-900">Over-Speed Governor (OSG)</h4>
                   </div>
-                  <h4 className="font-black text-sm text-slate-900">Over-Speed Governor (OSG)</h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     Mechanical flyball governor activates instantaneous progressive safety wedges to lock the car firmly to guide rails on overspeed.
                   </p>

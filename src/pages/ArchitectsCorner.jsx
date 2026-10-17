@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { 
-  Compass, 
-  Ruler, 
-  Maximize2, 
-  Download, 
-  FileText, 
-  Layers, 
-  CheckCircle2, 
-  Building2, 
-  Info, 
-  Share2, 
-  PhoneCall, 
+import {
+  Compass,
+  Ruler,
+  Maximize2,
+  Download,
+  FileText,
+  Layers,
+  CheckCircle2,
+  Building2,
+  Info,
+  Share2,
+  PhoneCall,
   ExternalLink,
   ZoomIn,
   X
@@ -196,11 +196,10 @@ export default function ArchitectsCorner({ onOpenBrochurePage }) {
                     setSelectedModelId(model.id);
                     setFilterDoorSystem("all");
                   }}
-                  className={`p-3 rounded-2xl text-left border transition-all flex flex-col justify-between cursor-pointer shrink-0 min-w-[130px] sm:min-w-0 active:scale-95 ${
-                    isSelected
+                  className={`p-3 rounded-2xl text-left border transition-all flex flex-col j cursor-pointer shrink-0 min-w-[130px] sm:min-w-0 active:scale-95 ${isSelected
                       ? "bg-slate-900 border-brand-teal text-white shadow-md ring-1 ring-brand-teal"
                       : "bg-white border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-100/50"
-                  }`}
+                    }`}
                 >
                   <span className={`text-[10px] font-mono font-bold uppercase tracking-wider block mb-1 ${isSelected ? "text-brand-teal" : "text-brand-orange"}`}>
                     {model.tag.split(" ")[0]}
@@ -216,7 +215,7 @@ export default function ArchitectsCorner({ onOpenBrochurePage }) {
 
         {/* Two-Column Workspace: Left Drawing Preview (5 cols), Right Specifications (7 cols) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
-          
+
           {/* Left: Technical Drawing Sheet (5 cols) */}
           <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-200/90 shadow-sm p-4 sm:p-5 space-y-4 relative lg:sticky lg:top-24">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
@@ -224,30 +223,27 @@ export default function ArchitectsCorner({ onOpenBrochurePage }) {
                 <h3 className="text-sm font-bold text-slate-900">{currentModel.name}</h3>
                 <span className="text-xs text-slate-500 font-mono">General Arrangement Drawing</span>
               </div>
-              
+
               {/* Drawing View Switcher */}
               <div className="flex self-start sm:self-auto bg-slate-100 p-1 rounded-xl text-xs font-semibold whitespace-nowrap">
                 <button
                   onClick={() => setActiveDrawingView("ga")}
-                  className={`px-2.5 py-1 rounded-lg transition-all ${
-                    activeDrawingView === "ga" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600 hover:text-slate-900"
-                  }`}
+                  className={`px-2.5 py-1 rounded-lg transition-all ${activeDrawingView === "ga" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600 hover:text-slate-900"
+                    }`}
                 >
                   GA Plan
                 </button>
                 <button
                   onClick={() => setActiveDrawingView("plan")}
-                  className={`px-2.5 py-1 rounded-lg transition-all ${
-                    activeDrawingView === "plan" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600 hover:text-slate-900"
-                  }`}
+                  className={`px-2.5 py-1 rounded-lg transition-all ${activeDrawingView === "plan" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600 hover:text-slate-900"
+                    }`}
                 >
                   Hoistway
                 </button>
                 <button
                   onClick={() => setActiveDrawingView("elevation")}
-                  className={`px-2.5 py-1 rounded-lg transition-all ${
-                    activeDrawingView === "elevation" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600 hover:text-slate-900"
-                  }`}
+                  className={`px-2.5 py-1 rounded-lg transition-all ${activeDrawingView === "elevation" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600 hover:text-slate-900"
+                    }`}
                 >
                   Elevation
                 </button>
@@ -261,7 +257,7 @@ export default function ArchitectsCorner({ onOpenBrochurePage }) {
                 alt={`${currentModel.name} Architectural Drawing`}
                 className="max-h-[340px] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
-              
+
               <button
                 onClick={() => setZoomModalImage(getActiveDrawing())}
                 className="absolute bottom-3 right-3 bg-slate-900/90 hover:bg-brand-teal text-white p-2.5 rounded-xl shadow-lg border border-slate-700/80 transition-colors flex items-center gap-1.5 text-xs font-semibold cursor-pointer"
@@ -306,7 +302,7 @@ export default function ArchitectsCorner({ onOpenBrochurePage }) {
 
           {/* Right: Full Specifications Matrix Table (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            
+
             {/* Table Header & Optional Filters */}
             <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 space-y-5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
@@ -320,25 +316,22 @@ export default function ArchitectsCorner({ onOpenBrochurePage }) {
                   <div className="flex items-center space-x-1.5 bg-slate-100 p-1 rounded-xl text-xs">
                     <button
                       onClick={() => setFilterDoorSystem("all")}
-                      className={`px-3 py-1 rounded-lg font-semibold transition-all ${
-                        filterDoorSystem === "all" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600"
-                      }`}
+                      className={`px-3 py-1 rounded-lg font-semibold transition-all ${filterDoorSystem === "all" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600"
+                        }`}
                     >
                       All ({tableData.rows.length})
                     </button>
                     <button
                       onClick={() => setFilterDoorSystem("automatic")}
-                      className={`px-3 py-1 rounded-lg font-semibold transition-all ${
-                        filterDoorSystem === "automatic" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600"
-                      }`}
+                      className={`px-3 py-1 rounded-lg font-semibold transition-all ${filterDoorSystem === "automatic" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600"
+                        }`}
                     >
                       Auto Door
                     </button>
                     <button
                       onClick={() => setFilterDoorSystem("manual")}
-                      className={`px-3 py-1 rounded-lg font-semibold transition-all ${
-                        filterDoorSystem === "manual" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600"
-                      }`}
+                      className={`px-3 py-1 rounded-lg font-semibold transition-all ${filterDoorSystem === "manual" ? "bg-white text-slate-900 shadow-xs font-bold" : "text-slate-600"
+                        }`}
                     >
                       Manual Door
                     </button>
@@ -360,21 +353,19 @@ export default function ArchitectsCorner({ onOpenBrochurePage }) {
                   </thead>
                   <tbody className="divide-y divide-slate-100">
                     {filteredRows.map((row, rIdx) => (
-                      <tr 
-                        key={rIdx} 
-                        className={`hover:bg-teal-50/50 transition-colors ${
-                          rIdx % 2 === 0 ? "bg-white" : "bg-slate-50/50"
-                        }`}
+                      <tr
+                        key={rIdx}
+                        className={`hover:bg-teal-50/50 transition-colors ${rIdx % 2 === 0 ? "bg-white" : "bg-slate-50/50"
+                          }`}
                       >
                         {tableData.columns.map((col) => {
                           const val = row[col.key];
                           const isHighlighted = col.key === "persons" || col.key === "shaftSize";
                           return (
-                            <td 
-                              key={col.key} 
-                              className={`py-2.5 px-3 border border-slate-200/60 whitespace-nowrap ${
-                                isHighlighted ? "font-bold text-slate-900" : "text-slate-600"
-                              }`}
+                            <td
+                              key={col.key}
+                              className={`py-2.5 px-3 border border-slate-200/60 whitespace-nowrap ${isHighlighted ? "font-bold text-slate-900" : "text-slate-600"
+                                }`}
                             >
                               {val ?? "—"}
                             </td>
@@ -446,7 +437,7 @@ export default function ArchitectsCorner({ onOpenBrochurePage }) {
                 <X className="w-5 h-5" />
               </button>
             </div>
-            
+
             <div className="flex-1 overflow-auto flex items-center justify-center p-4 my-2">
               <img
                 src={zoomModalImage}

@@ -31,7 +31,6 @@ export default function ServiceInstallation() {
         title="Ready to Plan Your Installation?"
         subtitle="Our engineering team provides complimentary site surveys, custom CAD layouts, and verified civil shaft calculations across Gujarat and Western India."
         variant="gradient"
-        className="rounded-none"
       />
     </>
   );

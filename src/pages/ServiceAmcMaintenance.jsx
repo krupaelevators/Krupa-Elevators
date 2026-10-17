@@ -214,7 +214,6 @@ export default function ServiceAmcMaintenance() {
         title="Schedule an On-Site Maintenance & Safety Audit"
         subtitle="Our technical supervisors inspect your elevator hoist ropes, brake holding torque, leveling switches, and controller logs to ensure 100% statutory compliance."
         variant="gradient"
-        className="rounded-none"
       />
     </>
   );

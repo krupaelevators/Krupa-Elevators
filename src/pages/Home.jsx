@@ -457,33 +457,42 @@ export default function Home({ onOpenBrochure }) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
               <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2 hover:bg-white/10 transition-colors">
-                <Factory className="w-6 h-6 text-brand-orange" />
-                <h3 className="text-base font-bold text-white">Kathwada Plant</h3>
+                <div className="flex gap-3 item-center">
+                  <Factory className="w-6 h-6 text-brand-orange" />
+                  <h3 className="text-base font-bold text-white">Kathwada Plant</h3>
+                </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   In-house CNC fiber laser cutting, precision bending, and 100% component bench testing before dispatch.
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2 hover:bg-white/10 transition-colors">
-                <Tag className="w-6 h-6 text-brand-teal" />
-                <h3 className="text-base font-bold text-white">Best Price Guarantee</h3>
+                <div className="flex gap-3 item-center">
+                  <Tag className="w-6 h-6 text-brand-teal" />
+                  <h3 className="text-base font-bold text-white">Best Price Guarantee</h3>
+                </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   Direct manufacturer rates save 20% to 30% upfront. High-efficiency PMS gearless drives save up to 40% power.
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2 hover:bg-white/10 transition-colors">
-                <ShieldCheck className="w-6 h-6 text-brand-orange" />
-                <h3 className="text-base font-bold text-white">100% Monopoly-Free</h3>
+                <div className="flex gap-3 item-center">
+                  <ShieldCheck className="w-6 h-6 text-brand-orange" />
+                  <h3 className="text-base font-bold text-white">100% Monopoly-Free</h3>
+                </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   Open-protocol non-proprietary controllers. Zero locked service passwords, saving ₹25k–₹50k yearly on AMC.
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2 hover:bg-white/10 transition-colors">
-                <MapPin className="w-6 h-6 text-brand-teal" />
-                <h3 className="text-base font-bold text-white">30-Min Rapid Service</h3>
+                <div className="flex gap-3 item-center">
+                  <MapPin className="w-6 h-6 text-brand-teal" />
+                  <h3 className="text-base font-bold text-white">30-Min Rapid Service</h3>
+                </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
+
                   Dedicated 24/7 technical breakdown response teams on ground across Ahmedabad, Gandhinagar, and Sanand.
                 </p>
               </div>
@@ -829,16 +838,18 @@ export default function Home({ onOpenBrochure }) {
               >
                 <div className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between h-full group">
                   <div className="space-y-3">
-                    <div className="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center group-hover:bg-brand-teal group-hover:text-white transition-colors">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-brand-orange block">
-                        {pillar.category}
-                      </span>
-                      <h3 className="text-base font-black text-slate-900 mt-0.5">
-                        {pillar.title}
-                      </h3>
+                    <div className="flex gap-4 items-start sm:gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center group-hover:bg-brand-teal group-hover:text-white transition-colors">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-brand-orange block">
+                          {pillar.category}
+                        </span>
+                        <h3 className="text-base font-black text-slate-900 mt-0.5">
+                          {pillar.title}
+                        </h3>
+                      </div>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
                       {pillar.desc}
@@ -998,8 +1009,8 @@ export default function Home({ onOpenBrochure }) {
                   type="button"
                   onClick={() => setFaqCategory(cat.id)}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${faqCategory === cat.id
-                      ? "bg-brand-teal text-white shadow-xs"
-                      : "bg-white text-slate-600 hover:text-slate-900 border border-slate-200 hover:border-slate-300"
+                    ? "bg-brand-teal text-white shadow-xs"
+                    : "bg-white text-slate-600 hover:text-slate-900 border border-slate-200 hover:border-slate-300"
                     }`}
                 >
                   {cat.label}
@@ -1026,8 +1037,8 @@ export default function Home({ onOpenBrochure }) {
                     <div
                       key={faq.originalIndex}
                       className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen
-                          ? "border-brand-teal/50 shadow-md ring-1 ring-brand-teal/20"
-                          : "border-slate-200/90 hover:border-slate-300 shadow-xs"
+                        ? "border-brand-teal/50 shadow-md ring-1 ring-brand-teal/20"
+                        : "border-slate-200/90 hover:border-slate-300 shadow-xs"
                         }`}
                     >
                       <button
@@ -1040,8 +1051,8 @@ export default function Home({ onOpenBrochure }) {
                         <div className="flex items-start gap-3">
                           <span
                             className={`w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-xs font-mono font-bold flex items-center justify-center shrink-0 mt-0.5 transition-colors ${isOpen
-                                ? "bg-brand-teal text-white"
-                                : "bg-slate-100 text-slate-500 group-hover:bg-teal-50 group-hover:text-brand-teal"
+                              ? "bg-brand-teal text-white"
+                              : "bg-slate-100 text-slate-500 group-hover:bg-teal-50 group-hover:text-brand-teal"
                               }`}
                           >
                             {itemNumber}
@@ -1055,8 +1066,8 @@ export default function Home({ onOpenBrochure }) {
                         </div>
                         <div
                           className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen
-                              ? "bg-brand-teal/10 text-brand-teal rotate-180"
-                              : "bg-slate-100 text-slate-400 group-hover:bg-slate-200 group-hover:text-slate-600"
+                            ? "bg-brand-teal/10 text-brand-teal rotate-180"
+                            : "bg-slate-100 text-slate-400 group-hover:bg-slate-200 group-hover:text-slate-600"
                             }`}
                         >
                           <ChevronDown className="w-4 h-4" />

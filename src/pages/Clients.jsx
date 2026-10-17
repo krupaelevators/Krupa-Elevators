@@ -189,7 +189,7 @@ export default function Clients() {
         </ScrollReveal>
 
         {/* Landmark clients */}
-        <section className="space-y-6" aria-labelledby="landmark-clients">
+        {/* <section className="space-y-6" aria-labelledby="landmark-clients">
           <div className="max-w-2xl space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Landmark Clients</span>
             <h2 id="landmark-clients" className="text-2xl sm:text-3xl font-bold text-slate-900">
@@ -205,7 +205,7 @@ export default function Clients() {
               <LandmarkCard key={c.id} client={c} />
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* All clients */}
         <section id="all-clients" className="space-y-6 scroll-mt-24" aria-labelledby="all-clients-heading">
@@ -230,11 +230,10 @@ export default function Clients() {
                     role="tab"
                     aria-selected={active}
                     onClick={() => setActiveTab(t.id)}
-                    className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-colors min-h-[38px] ${
-                      active
-                        ? "bg-slate-900 border-slate-900 text-white"
-                        : "bg-white border-slate-200 text-slate-700 hover:border-brand-teal hover:text-brand-teal"
-                    }`}
+                    className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold border transition-colors min-h-[38px] ${active
+                      ? "bg-slate-900 border-slate-900 text-white"
+                      : "bg-white border-slate-200 text-slate-700 hover:border-brand-teal hover:text-brand-teal"
+                      }`}
                   >
                     {t.label} <span className={active ? "text-teal-300" : "text-slate-500"}>{t.count}</span>
                   </button>

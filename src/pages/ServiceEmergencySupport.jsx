@@ -102,10 +102,12 @@ export default function ServiceEmergencySupport() {
               distance={20}
               className="bg-white rounded-3xl border border-slate-200 shadow-xs p-6 sm:p-8 space-y-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center">
-                <MapPin className="w-5 h-5" />
+              <div className="flex gap-3 items-center">
+                <div className="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900">Coverage Area</h3>
               </div>
-              <h3 className="text-lg font-bold text-slate-900">Coverage Area</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Dedicated mobile service vans stationed across <strong>Ahmedabad, Gandhinagar, and Sanand/Bavla</strong> industrial zones, dispatched from our Kathwada manufacturing works.
               </p>
@@ -117,11 +119,11 @@ export default function ServiceEmergencySupport() {
               delay={100}
               className="bg-white rounded-3xl border border-slate-200 shadow-xs p-6 sm:p-8 space-y-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center">
+              <div className="flex gap-3 items-center">              <div className="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center">
                 <Clock className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900">Response Guarantee</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
+                <h3 className="text-lg font-bold text-slate-900">Response Guarantee</h3>
+              </div>   <p className="text-xs text-slate-600 leading-relaxed">
                 30–45 minute emergency response guarantee, with priority dispatch within 60 minutes across Ahmedabad for Semi-Comprehensive and Comprehensive AMC customers, 365 days a year.
               </p>
             </ScrollReveal>
@@ -132,10 +134,12 @@ export default function ServiceEmergencySupport() {
               delay={200}
               className="bg-white rounded-3xl border border-slate-200 shadow-xs p-6 sm:p-8 space-y-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center">
-                <Radio className="w-5 h-5" />
+              <div className="flex gap-3 items-center">
+                <div className="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center">
+                  <Radio className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900">Remote Diagnostics</h3>
               </div>
-              <h3 className="text-lg font-bold text-slate-900">Remote Diagnostics</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 24/7 IoT telemetry and automated alert dispatch mean technicians often arrive already knowing the fault code and carrying the exact replacement component.
               </p>
@@ -176,7 +180,7 @@ export default function ServiceEmergencySupport() {
                   key={idx}
                   className="p-5 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-2 flex items-start gap-3"
                 >
-                  <Wrench className="w-4 h-4 text-brand-orange shrink-0 mt-0.5" />
+                  <Wrench className="w-4 h-4 text-brand-orange shrink-0 mt-2.5" />
                   <div>
                     <h4 className="text-sm font-bold text-white">{item.title}</h4>
                     <p className="text-xs text-slate-300 leading-relaxed mt-1">
@@ -194,7 +198,7 @@ export default function ServiceEmergencySupport() {
         title="Facing an Elevator Breakdown Right Now?"
         subtitle="Report it on WhatsApp or call our helpline directly — our nearest mobile service van will be dispatched immediately."
         variant="gradient"
-        className="rounded-none"
+      // className="rounded-none"
       />
     </>
   );

@@ -10,7 +10,7 @@ export default function Footer({ onOpenBrochure }) {
   return (
     <footer className="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div className="flex flex-wrap flex-row gap-10 pb-12 border-b border-slate-800">
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
@@ -114,7 +114,7 @@ export default function Footer({ onOpenBrochure }) {
           </div>
 
           {/* Product Lines */}
-          <div className="space-y-3">
+          <div className="space-y-3 inline">
             <h3 className="text-xs font-bold uppercase tracking-wider text-white border-l-2 border-brand-orange pl-2">
               Products
             </h3>
@@ -173,15 +173,15 @@ export default function Footer({ onOpenBrochure }) {
           </div>
 
           {/* Facilities & Contact */}
-          <div className="space-y-3">
+          <div className="space-y-3 inline">
             <h3 className="text-xs font-bold uppercase tracking-wider text-white border-l-2 border-brand-teal pl-2">
               Reach Us
             </h3>
             <div className="space-y-3 text-xs leading-relaxed">
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-brand-teal shrink-0 mt-0.5" />
-                <span>
-                  <strong className="text-white block font-semibold">Works & Factory:</strong>
+                <span className="inline-block">
+                  <strong className="text-white block font-semibold ">Works & Factory:</strong>
                   {companyData.contacts.factory.address}
                 </span>
               </div>

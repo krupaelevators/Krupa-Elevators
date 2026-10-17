@@ -129,7 +129,7 @@ export default function ElevatorsIndex() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent pointer-events-none" />
-                  
+
                   {/* Category & Best Price Badges */}
                   <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
                     <span className="bg-slate-900/85 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-teal-300 border border-slate-700">
@@ -235,36 +235,40 @@ export default function ElevatorsIndex() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center font-black">
-                <Factory className="w-5 h-5" />
-              </div>
-              <h3 className="text-base font-black text-slate-900">
-                Direct Kathwada Plant
-              </h3>
+              <div className="flex gap-3 items-center">
+                <div className="w-9 h-9 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center font-black">
+                  <Factory className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-black text-slate-900">
+                  Direct Kathwada Plant
+                </h3> </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Our plant in Kathwada GIDC Road No 5 houses CNC fiber laser cutting, precision press brakes, and a dynamic safety testing tower. No third-party trading, no middleman markups.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center font-black">
-                <Tag className="w-5 h-5" />
+              <div className="flex gap-3 items-center">
+                <div className="w-9 h-9 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center font-black">
+                  <Tag className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-black text-slate-900">
+                  Best Price Guarantee
+                </h3>
               </div>
-              <h3 className="text-base font-black text-slate-900">
-                Best Price Guarantee
-              </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 By purchasing direct from the manufacturer, clients save 20% to 30% on initial capital investment, plus up to 40% on annual electrical consumption using our PMS gearless machines.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-black">
+              <div className="flex gap-3 items-center">  <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-black">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-black text-slate-900">
-                100% Monopoly-Free AMC
-              </h3>
+                <h3 className="text-base font-black text-slate-900">
+                  100% Monopoly-Free AMC
+                </h3>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Zero password locks and open-protocol controllers. You are the true owner of your elevator, free to renew maintenance at honest, competitive market rates.
               </p>
@@ -318,7 +322,7 @@ export default function ElevatorsIndex() {
           badge="Direct Kathwada Engineering & CAD Team"
           variant="gradient"
         />
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }

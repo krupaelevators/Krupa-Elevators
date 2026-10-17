@@ -57,8 +57,12 @@ export default function InstallationsTeaser() {
                 to={`/about/projects?type=${t.id}#installations`}
                 className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-brand-teal transition-colors space-y-2"
               >
-                <Icon className="w-5 h-5 text-brand-teal" />
-                <div className="font-display text-2xl font-bold text-slate-900">{t.projects.length}</div>
+                <div className="flex gap-3 items-center">
+                  <div className="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center group-hover:bg-brand-teal group-hover:text-white transition-colors">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div className="font-display text-3xl font-bold text-slate-900">{t.projects.length}</div>
+                </div>
                 <div className="text-xs text-slate-600 leading-snug">{t.short}</div>
               </Link>
             );

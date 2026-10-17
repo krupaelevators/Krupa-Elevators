@@ -60,7 +60,6 @@ export default function ServiceModernization() {
         title="Ready to Modernize Your Building's Elevator?"
         subtitle="Our engineers assess your existing shaft, controller, and drive system to recommend the right modernization scope — no unnecessary civil work."
         variant="gradient"
-        className="rounded-none"
       />
     </>
   );

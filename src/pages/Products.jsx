@@ -85,10 +85,12 @@ export default function Products() {
                   className="group flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-teal/60 transition-all"
                 >
                   <div className="space-y-3">
-                    <div className="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center group-hover:bg-brand-teal transition-colors">
-                      <Icon className="w-6 h-6 text-brand-teal group-hover:text-white transition-colors" />
+                    <div className="flex items-center gap-2">
+                      <div className="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center group-hover:bg-brand-teal transition-colors">
+                        <Icon className="w-6 h-6 text-brand-teal group-hover:text-white transition-colors" />
+                      </div>
+                      <h2 className="text-lg font-black text-slate-900">{cat.title}</h2>
                     </div>
-                    <h2 className="text-lg font-black text-slate-900">{cat.title}</h2>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                       {cat.description}
                     </p>
