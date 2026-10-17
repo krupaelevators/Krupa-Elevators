@@ -46,6 +46,7 @@ export const routes = [
   '/',
   '/about',
   '/about/projects',
+  '/clients',
   '/products',
   '/products/elevators',
   ...elevatorMaster.map((e) => `/products/elevators/${e.id}`),

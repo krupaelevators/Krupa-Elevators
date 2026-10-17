@@ -1,15 +1,29 @@
-import React, { useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { Download, ArrowRight, MapPin, Search, Building2, X } from "lucide-react";
+import {
+  Download,
+  ArrowRight,
+  MapPin,
+  Search,
+  Building2,
+  X,
+  Sparkles,
+  CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
+  Layers,
+} from "lucide-react";
 import PageHero from "../components/common/PageHero";
 import CTASection from "../components/common/CTASection";
 import { buildingTypeIcons } from "../components/common/InstallationsTeaser";
 import { companyData } from "../data/companyData";
 import ScrollReveal from "../components/ScrollReveal";
 import Seo from "../components/common/Seo";
+import { absoluteUrl } from "../config/site";
 import {
   installations,
   installationStats,
+  clientShowcase,
   BUILDING_TYPES,
   DRIVE_TYPES,
   driveOf,
@@ -30,23 +44,48 @@ const driveStyles = {
 function InstallationCard({ client }) {
   const Icon = buildingTypeIcons[client.buildingType] || Building2;
   return (
-    <article className="flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all">
-      <header className="p-5 pb-4 space-y-2 border-b border-slate-100">
+    <article className="flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all overflow-hidden group">
+      <header className="p-5 pb-4 space-y-3 border-b border-slate-100">
         <div className="flex items-center justify-between gap-3 text-[11px] font-semibold text-slate-500">
           <span className="inline-flex items-center gap-1.5">
             <Icon className="w-3.5 h-3.5 text-brand-teal" />
             {typeLabel[client.buildingType]}
           </span>
-          <span className="shrink-0">
+          <span className="shrink-0 font-medium">
             {client.elevators.length} {client.elevators.length === 1 ? "lift" : "lifts"}
           </span>
         </div>
-        <h3 className="text-sm font-bold text-slate-900 leading-snug uppercase">{client.clientName}</h3>
-        <p className="inline-flex items-center gap-1 text-xs text-slate-500">
-          <MapPin className="w-3.5 h-3.5 text-brand-orange" />
-          <span className="capitalize">{client.location.toLowerCase()}</span>
-          {client.state !== "Gujarat" && <span>, {client.state}</span>}
-        </p>
+
+        <div className="flex items-start gap-3.5">
+          {client.logo ? (
+            <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-xl bg-white border border-slate-200/90 p-1.5 shadow-2xs flex items-center justify-center overflow-hidden group-hover:border-brand-teal/40 transition-colors">
+              <img
+                src={client.logo}
+                alt={client.logoAlt || `${client.clientName} logo - Krupa Elevators passenger lift installation in ${client.location}, Gujarat`}
+                width="64"
+                height="64"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          ) : (
+            <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-xl bg-slate-50 border border-slate-200/60 flex items-center justify-center text-slate-400">
+              <Icon className="w-6 h-6 text-slate-400" />
+            </div>
+          )}
+
+          <div className="flex-1 min-w-0">
+            <h3 className="text-sm font-bold text-slate-900 leading-snug uppercase group-hover:text-brand-teal transition-colors">
+              {client.clientName}
+            </h3>
+            <p className="inline-flex items-center gap-1 text-xs text-slate-500 mt-1">
+              <MapPin className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+              <span className="capitalize">{client.location.toLowerCase()}</span>
+              {client.state !== "Gujarat" && <span>, {client.state}</span>}
+            </p>
+          </div>
+        </div>
       </header>
 
       <ul className="divide-y divide-slate-100 text-xs">
@@ -127,20 +166,82 @@ export default function Projects() {
 
   const hasFilters = activeType !== "all" || activeDrive !== "all" || query;
 
-  const selectType = (id) => {
-    setActiveType(id);
+  // Pagination states: default 12 cards per page (fast load & compact layout)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState("12"); // "12" | "24" | "all"
+
+  // Reset to page 1 whenever any filter or page size changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeType, activeDrive, query, pageSize]);
+
+  const totalPages = useMemo(() => {
+    if (pageSize === "all") return 1;
+    return Math.max(1, Math.ceil(filtered.length / Number(pageSize)));
+  }, [filtered.length, pageSize]);
+
+  // Keep page within bounds if filter reduces total items
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(1);
+    }
+  }, [currentPage, totalPages]);
+
+  const paginatedProjects = useMemo(() => {
+    if (pageSize === "all") return filtered;
+    const size = Number(pageSize);
+    const start = (currentPage - 1) * size;
+    return filtered.slice(start, start + size);
+  }, [filtered, currentPage, pageSize]);
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
     document.getElementById("installations")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  const selectType = (id) => {
+    setActiveType(id);
+    setCurrentPage(1);
+    document.getElementById("installations")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const clientListSchema = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Krupa Elevators - Client Installations & Landmark Projects",
+      "description": `Comprehensive installation record of ${installationStats.projects} projects across ${installationStats.locations} towns and cities including Salangpur Hanumanji Mandir, Vadtal Dham, Joyalukkas, and major residential townships in Gujarat.`,
+      "numberOfItems": installations.length,
+      "itemListElement": installations.map((c, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "item": {
+          "@type": "Place",
+          "name": c.clientName,
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": c.location,
+            "addressRegion": c.state,
+            "addressCountry": "IN",
+          },
+          ...(c.logo ? { "image": absoluteUrl(c.logo) } : {}),
+        },
+      })),
+    }),
+    []
+  );
 
   return (
     <div className="min-h-screen bg-slate-50 space-y-12 sm:space-y-16 pb-4">
       <Seo
-        title="Projects & Clients"
+        title="Elevator Installation Projects in Gujarat"
         description={`Krupa Elevators installation record — ${installationStats.projects} projects across ${installationStats.locations} locations: residential towers, temples, hospitals, bungalows, showrooms and factories in Gujarat and beyond.`}
+        keywords="Krupa Elevators clients, elevator installations Ahmedabad, lift installation Gujarat, Salangpur mandir lift, Joyalukkas elevator, hospital lifts Gujarat, passenger elevator projects"
+        schema={clientListSchema}
       />
 
       <PageHero
-        breadcrumbs={[{ label: "About", to: "/about" }, { label: "Projects & Clients" }]}
+        breadcrumbs={[{ label: "About", to: "/about" }, { label: "Project Portfolio" }]}
         icon={Building2}
         badge="Our Installation Record"
         title="Where Our Elevators Are Running"
@@ -230,6 +331,23 @@ export default function Projects() {
           </div>
         </section>
 
+        {/* Clients now have their own page */}
+        <Link
+          to="/clients"
+          className="group flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-brand-teal hover:shadow-md transition-all"
+        >
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Our Clients</span>
+            <p className="mt-1 text-base sm:text-lg font-bold text-slate-900">
+              Salangpur Hanumanji Mandir, Vadtal Dham, Joyalukkas and {clientShowcase.length - 3}+ more
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-teal shrink-0">
+            See all client logos
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </span>
+        </Link>
+
         {/* Full project directory */}
         <section id="installations" className="space-y-6 scroll-mt-24">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
@@ -249,6 +367,8 @@ export default function Projects() {
                 />
               </label>
               <select
+                id="project-drive-type"
+                aria-label="Filter projects by elevator drive type"
                 value={activeDrive}
                 onChange={(e) => setActiveDrive(e.target.value)}
                 className="w-full sm:w-auto px-3.5 py-3 sm:py-2.5 rounded-xl border border-slate-200 bg-white text-base sm:text-sm text-slate-700 min-h-[44px] focus:outline-none focus:ring-2 focus:ring-brand-teal/30 focus:border-brand-teal transition-all"
@@ -275,33 +395,105 @@ export default function Projects() {
                   : "bg-white text-slate-600 border-slate-200 hover:border-slate-300"
                   }`}
               >
-                {t.short} <span className="opacity-60 ml-1">({t.projects.length})</span>
+                {t.short} <span className="ml-1 font-semibold opacity-80">({t.projects.length})</span>
               </button>
             ))}
           </div>
 
-          <div className="flex items-center justify-between text-xs text-slate-500">
-            <span>
-              Showing {filtered.length} of {installations.length} projects
-            </span>
-            {hasFilters && (
-              <button
-                type="button"
-                onClick={() => setSearchParams({}, { replace: true, preventScrollReset: true })}
-                className="inline-flex items-center gap-1 font-semibold text-brand-teal hover:text-teal-700"
-              >
-                <X className="w-3.5 h-3.5" />
-                Clear filters
-              </button>
-            )}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500 bg-white p-3.5 rounded-xl border border-slate-200">
+            <div className="flex items-center gap-3">
+              <span>
+                Showing {filtered.length === 0 ? 0 : (currentPage - 1) * Number(pageSize === "all" ? filtered.length : pageSize) + 1}–
+                {pageSize === "all" ? filtered.length : Math.min(currentPage * Number(pageSize), filtered.length)} of {filtered.length} projects
+                {filtered.length !== installations.length && ` (filtered from ${installations.length})`}
+              </span>
+              {hasFilters && (
+                <button
+                  type="button"
+                  onClick={() => setSearchParams({}, { replace: true, preventScrollReset: true })}
+                  className="inline-flex items-center gap-1 font-semibold text-brand-teal hover:text-teal-700 ml-2"
+                >
+                  <X className="w-3.5 h-3.5" />
+                  Clear filters
+                </button>
+              )}
+            </div>
+
+            {/* Page Size View Switcher */}
+            <div className="flex items-center gap-1.5 self-end sm:self-auto">
+              <span className="text-slate-400 font-medium mr-1 flex items-center gap-1">
+                <Layers className="w-3.5 h-3.5" /> Per page:
+              </span>
+              {["12", "24", "all"].map((size) => (
+                <button
+                  key={size}
+                  type="button"
+                  onClick={() => setPageSize(size)}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
+                    pageSize === size
+                      ? "bg-brand-teal text-white shadow-2xs"
+                      : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                  }`}
+                >
+                  {size === "all" ? "All" : size}
+                </button>
+              ))}
+            </div>
           </div>
 
           {filtered.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 items-start">
-              {filtered.map((client) => (
-                <InstallationCard key={client.id} client={client} />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 items-start">
+                {paginatedProjects.map((client) => (
+                  <InstallationCard key={client.id} client={client} />
+                ))}
+              </div>
+
+              {/* Numbered Pagination Nav */}
+              {pageSize !== "all" && totalPages > 1 && (
+                <nav
+                  aria-label="Installation pagination"
+                  className="pt-6 flex flex-wrap items-center justify-center gap-2"
+                >
+                  <button
+                    type="button"
+                    onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                    disabled={currentPage === 1}
+                    className="inline-flex items-center gap-1 px-3.5 py-2 rounded-xl text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:border-brand-teal hover:text-brand-teal disabled:opacity-40 disabled:pointer-events-none transition-all shadow-2xs cursor-pointer"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                    <span>Previous</span>
+                  </button>
+
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                      <button
+                        key={pageNum}
+                        type="button"
+                        onClick={() => handlePageChange(pageNum)}
+                        className={`w-9 h-9 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                          currentPage === pageNum
+                            ? "bg-slate-900 text-white shadow-sm"
+                            : "bg-white border border-slate-200 text-slate-600 hover:border-brand-teal hover:text-brand-teal"
+                        }`}
+                      >
+                        {pageNum}
+                      </button>
+                    ))}
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                    disabled={currentPage === totalPages}
+                    className="inline-flex items-center gap-1 px-3.5 py-2 rounded-xl text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:border-brand-teal hover:text-brand-teal disabled:opacity-40 disabled:pointer-events-none transition-all shadow-2xs cursor-pointer"
+                  >
+                    <span>Next</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </nav>
+              )}
+            </>
           ) : (
             <p className="py-16 text-center text-sm text-slate-500 bg-white rounded-2xl border border-slate-200">
               No projects match your search.

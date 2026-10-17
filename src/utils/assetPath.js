@@ -8,7 +8,7 @@ export function assetUrl(path) {
   if (path.startsWith("http://") || path.startsWith("https://") || path.startsWith("data:")) {
     return path;
   }
-  const base = import.meta.env.BASE_URL || "/";
+  const base = (typeof import.meta !== "undefined" && import.meta.env?.BASE_URL) || "/";
   // Already prefixed (e.g. webpUrl() on a path that went through assetUrl())
   if (base !== "/" && path.startsWith(base)) return path;
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;

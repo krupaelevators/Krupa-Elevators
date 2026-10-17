@@ -18,6 +18,17 @@ const DEFAULT_IMAGE_SIZE = { width: 840, height: 441 };
  */
 export const SeoContext = createContext(null);
 
+// Search results show ~155-160 characters; longer text is cut mid-word. End at the last
+// full sentence that fits, or else at a word boundary.
+const MAX_DESC = 160;
+function clipDescription(text) {
+  if (text.length <= MAX_DESC) return text;
+  const head = text.slice(0, MAX_DESC);
+  const sentenceEnd = head.lastIndexOf(". ");
+  if (sentenceEnd >= 90) return head.slice(0, sentenceEnd + 1);
+  return head.slice(0, head.lastIndexOf(" ")).replace(/[\s,;:–—-]+$/, "") + "…";
+}
+
 /** Resolves props + current path into the final head values (shared by server and client). */
 export function resolveSeo({ title, description, keywords, image, type, path, schema }, pathname) {
   const fullTitle = !title
@@ -27,7 +38,7 @@ export function resolveSeo({ title, description, keywords, image, type, path, sc
       : `${title} | ${SITE_NAME}`;
   return {
     title: fullTitle,
-    description: description || DEFAULT_DESC,
+    description: clipDescription(description || DEFAULT_DESC),
     keywords: keywords || DEFAULT_KEYWORDS,
     image: image ? absoluteUrl(image) : DEFAULT_IMAGE,
     imageSize: image ? null : DEFAULT_IMAGE_SIZE,

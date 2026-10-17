@@ -32,7 +32,7 @@ const BUILDING_TYPES = [
     name: "Luxury Villa / Bungalow",
     badge: "Low Pit / 220V Single-Phase",
     icon: HomeIcon,
-    image: assetUrl("/assets/elevators/home_elevator.jpg"),
+    image: assetUrl("/assets/elevators/thumbs/home_elevator.webp"),
     description: "Compact architectural lift for private residences, duplexes and penthouses.",
     defaultFloors: "G+2",
     capacities: [
@@ -49,7 +49,7 @@ const BUILDING_TYPES = [
     name: "Residential Apartment",
     badge: "High Efficiency / PMSM",
     icon: Building,
-    image: assetUrl("/assets/elevators/passenger_elevator.jpg"),
+    image: assetUrl("/assets/elevators/thumbs/passenger_elevator.webp"),
     description: "Robust, continuous-duty passenger lifts for mid and high-rise apartment societies.",
     defaultFloors: "G+5",
     capacities: [
@@ -67,7 +67,7 @@ const BUILDING_TYPES = [
     name: "Corporate / Commercial",
     badge: "MRL & High Traffic",
     icon: Building2,
-    image: assetUrl("/assets/elevators/mrl_elevator.jpg"),
+    image: assetUrl("/assets/elevators/thumbs/mrl_elevator.webp"),
     description: "Rapid, intelligent dispatch elevators designed for office complexes and hotels.",
     defaultFloors: "G+7",
     capacities: [
@@ -85,7 +85,7 @@ const BUILDING_TYPES = [
     name: "Panoramic / Capsule",
     badge: "Architectural Showcase",
     icon: Sparkles,
-    image: assetUrl("/assets/elevators/capsule_elevator.jpg"),
+    image: assetUrl("/assets/elevators/thumbs/capsule_elevator.webp"),
     description: "Curved laminated safety glass elevators creating scenic visual centerpieces.",
     defaultFloors: "G+4",
     capacities: [
@@ -102,7 +102,7 @@ const BUILDING_TYPES = [
     name: "Hospital / Healthcare",
     badge: "Stretcher & Bed Ready",
     icon: Hospital,
-    image: assetUrl("/assets/elevators/hospital_elevator.jpg"),
+    image: assetUrl("/assets/elevators/thumbs/hospital_elevator.webp"),
     description: "Extra-deep cabins accommodating ICU stretchers, medical staff, and sensitive monitoring gear.",
     defaultFloors: "G+4",
     capacities: [
@@ -118,7 +118,7 @@ const BUILDING_TYPES = [
     name: "Freight / Goods Lift",
     badge: "Heavy Duty 1000 - 4000 kg",
     icon: Truck,
-    image: assetUrl("/assets/elevators/goods_elevator.jpg"),
+    image: assetUrl("/assets/elevators/thumbs/goods_elevator.webp"),
     description: "Reinforced structural steel cabins designed for factories, warehouses and pallet trucks.",
     defaultFloors: "G+3",
     capacities: [
@@ -540,6 +540,10 @@ export default function LiftEstimatorWizard({ onOpenBrochure }) {
                     <img
                       src={currentBuilding.image}
                       alt={currentBuilding.name}
+                      width="56"
+                      height="56"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </div>

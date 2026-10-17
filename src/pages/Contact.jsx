@@ -183,7 +183,7 @@ export default function Contact({ onOpenBrochure }) {
   return (
     <div className="min-h-screen bg-slate-50 pb-12 ">
       <Seo
-        title="Get Best Price Elevator Quote | Best Elevator Company in Ahmedabad"
+        title="Contact Us | Free Elevator Quote & Site Survey"
         description="Contact Krupa Elevators — rated #1 best elevator company in Ahmedabad. Request a free site survey, custom AutoCAD hoistway layout, or affordable elevator quotation direct from our Kathwada manufacturing plant."
         keywords="best elevator company in Ahmedabad, elevator quotation Ahmedabad, affordable elevator solution, best price lift in Ahmedabad, elevator contact Kathwada GIDC"
       />
@@ -531,10 +531,11 @@ export default function Contact({ onOpenBrochure }) {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    <label htmlFor="contact-building-type" className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Building Category
                     </label>
                     <select
+                      id="contact-building-type"
                       value={formData.buildingType}
                       onChange={(e) => setFormData({ ...formData, buildingType: e.target.value })}
                       className="w-full px-3.5 py-3 sm:py-2.5 rounded-xl border border-slate-200 text-sm sm:text-xs min-h-[44px] focus:outline-none focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 transition-all bg-white"
@@ -549,10 +550,11 @@ export default function Contact({ onOpenBrochure }) {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    <label htmlFor="contact-floors" className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Number of Floors / Stops
                     </label>
                     <select
+                      id="contact-floors"
                       value={formData.floors}
                       onChange={(e) => setFormData({ ...formData, floors: e.target.value })}
                       className="w-full px-3.5 py-3 sm:py-2.5 rounded-xl border border-slate-200 text-sm sm:text-xs min-h-[44px] focus:outline-none focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 transition-all bg-white"
@@ -567,10 +569,11 @@ export default function Contact({ onOpenBrochure }) {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    <label htmlFor="contact-capacity" className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Rated Passenger Capacity
                     </label>
                     <select
+                      id="contact-capacity"
                       value={formData.capacity}
                       onChange={(e) => setFormData({ ...formData, capacity: e.target.value })}
                       className="w-full px-3.5 py-3 sm:py-2.5 rounded-xl border border-slate-200 text-sm sm:text-xs min-h-[44px] focus:outline-none focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 transition-all bg-white"
@@ -584,10 +587,11 @@ export default function Contact({ onOpenBrochure }) {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    <label htmlFor="contact-door-type" className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Preferred Door System
                     </label>
                     <select
+                      id="contact-door-type"
                       value={formData.doorType}
                       onChange={(e) => setFormData({ ...formData, doorType: e.target.value })}
                       className="w-full px-3.5 py-3 sm:py-2.5 rounded-xl border border-slate-200 text-sm sm:text-xs min-h-[44px] focus:outline-none focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20 transition-all bg-white"

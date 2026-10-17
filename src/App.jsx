@@ -1,13 +1,13 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { Routes, Route, useLocation, useParams, Navigate } from "react-router-dom";
 import { Phone } from "lucide-react";
 import WhatsAppIcon from "./components/common/WhatsAppIcon";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
 import { companyData } from "./data/companyData";
 
-// Route code-splitting: keep Home eager for immediate FCP/LCP, lazy load secondary routes
+// Route code-splitting: all routes lazy-loaded for minimal initial JS payload
+const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const ProductsHub = lazy(() => import("./pages/Products"));
 const ElevatorsIndex = lazy(() => import("./pages/ElevatorsIndex"));
@@ -23,6 +23,7 @@ const ServiceModernization = lazy(() => import("./pages/ServiceModernization"));
 const ServiceInstallation = lazy(() => import("./pages/ServiceInstallation"));
 const ServiceEmergencySupport = lazy(() => import("./pages/ServiceEmergencySupport"));
 const Projects = lazy(() => import("./pages/Projects"));
+const Clients = lazy(() => import("./pages/Clients"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ArchitectsCorner = lazy(() => import("./pages/ArchitectsCorner"));
 const BrochureModal = lazy(() => import("./components/BrochureModal"));
@@ -102,13 +103,43 @@ function ScrollToTop() {
   return null;
 }
 
+// Automatically reports page views to Google Analytics 4 (GA4) on SPA route transitions
+function GoogleAnalyticsTracker() {
+  const { pathname, search } = useLocation();
+  // index.html's gtag('config') already records the landing page; reporting it again
+  // here counted every first visit twice.
+  const isLandingPage = useRef(true);
+
+  useEffect(() => {
+    if (isLandingPage.current) {
+      isLandingPage.current = false;
+      return;
+    }
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("config", "G-0FK6G7PREH", {
+        page_path: pathname + search,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
+    }
+  }, [pathname, search]);
+
+  return null;
+}
+
 // Fades each new page in. Keyed on the path only, so filter (?type=) and in-page
 // (#section) changes update instantly without replaying the animation.
 function PageTransition({ children }) {
   const { pathname, hash } = useLocation();
+  // The first page arrives prerendered and should paint at once (it is the LCP), so only
+  // later in-app navigations fade in.
+  const isFirstPage = useRef(true);
+  useEffect(() => {
+    isFirstPage.current = false;
+  }, []);
   // Links to a section (#id) scroll there instead — that movement is the transition.
   return (
-    <div key={pathname} className={hash ? undefined : "page-transition"}>
+    <div key={pathname} className={hash || isFirstPage.current ? undefined : "page-transition"}>
       {children}
     </div>
   );
@@ -126,6 +157,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <GoogleAnalyticsTracker />
       <div className="min-h-screen flex flex-col bg-slate-50 font-sans antialiased text-slate-900">
         <Navbar onOpenBrochure={() => handleOpenBrochure(1)} />
 
@@ -147,6 +179,7 @@ export default function App() {
                 {/* 2. About */}
                 <Route path="/about" element={<About onOpenBrochure={() => handleOpenBrochure(1)} />} />
                 <Route path="/about/projects" element={<Projects onOpenBrochure={() => handleOpenBrochure(1)} />} />
+                <Route path="/clients" element={<Clients />} />
 
                 {/* 3. Products Hub */}
                 <Route path="/products" element={<ProductsHub />} />
@@ -219,6 +252,7 @@ export default function App() {
                 <Route path="/specifications" element={<Navigate to="/products/elevators" replace />} />
                 <Route path="/service" element={<Navigate to="/services" replace />} />
                 <Route path="/projects" element={<Navigate to="/about/projects" replace />} />
+                <Route path="/about/clients" element={<Navigate to="/clients" replace />} />
 
                 {/* Catch-all */}
                 <Route

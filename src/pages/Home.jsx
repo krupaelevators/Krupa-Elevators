@@ -32,6 +32,7 @@ import CTASection from "../components/common/CTASection";
 import LiftEstimatorWizard from "../components/LiftEstimatorWizard";
 import OwnershipPolicySection from "../components/common/OwnershipPolicySection";
 import InstallationsTeaser from "../components/common/InstallationsTeaser";
+import ClientLogoStrip from "../components/common/ClientLogoStrip";
 
 // Hero visual scenes with WebP primary and JPG fallback
 const heroScenes = [
@@ -124,7 +125,7 @@ export default function Home({ onOpenBrochure }) {
     "@graph": [
       {
         "@type": ["LocalBusiness", "ManufacturingBusiness"],
-        "@id": absoluteUrl("/#localbusiness"),
+        "@id": absoluteUrl("/#organization"),
         name: "KRUPA ELEVATORS",
         alternateName: [
           "Krupa Elevators Ahmedabad",
@@ -364,7 +365,7 @@ export default function Home({ onOpenBrochure }) {
       {/* ========================================================================= */}
       {/* 2. ABOUT TEASER — condensed; full depth lives on /about                   */}
       {/* ========================================================================= */}
-      <section id="about-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section id="about-section" className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-4">
           <div className="flex items-center space-x-3">
             <div className="w-2.5 h-2.5 rounded-full bg-brand-teal animate-pulse" />
@@ -436,7 +437,7 @@ export default function Home({ onOpenBrochure }) {
       {/* ========================================================================= */}
       {/* 2B. AHMEDABAD MARKET LEADERSHIP & BEST MANUFACTURING PLANT                */}
       {/* ========================================================================= */}
-      <section id="ahmedabad-authority" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 scroll-mt-24">
+      <section id="ahmedabad-authority" className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 scroll-mt-24">
         <div className="rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950 text-white p-8 sm:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-brand-teal/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -510,7 +511,7 @@ export default function Home({ onOpenBrochure }) {
       {/* ========================================================================= */}
       {/* 3. OUR ELEVATOR SECTION (Client-Friendly & Minimal)                       */}
       {/* ========================================================================= */}
-      <section id="our-elevators-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="our-elevators-section" className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-5">
           <div className="space-y-1 max-w-2xl">
             <span className="text-xs font-bold text-brand-teal uppercase tracking-widest block">
@@ -643,7 +644,7 @@ export default function Home({ onOpenBrochure }) {
       {/* ========================================================================= */}
       {/* 4. INTERIOR SECTION (Client-Friendly & Minimal)                           */}
       {/* ========================================================================= */}
-      <section id="interior-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="interior-section" className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-5">
           <div className="space-y-1 max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-widest text-brand-teal block">
@@ -759,7 +760,7 @@ export default function Home({ onOpenBrochure }) {
       {/* ========================================================================= */}
       {/* 5. TECHNOLOGY & MECHANISMS SECTION (Client-Friendly & Minimal)            */}
       {/* ========================================================================= */}
-      <section id="mechanisms-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="mechanisms-section" className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-5">
           <div className="space-y-1 max-w-2xl">
             <span className="text-xs font-bold text-brand-teal uppercase tracking-widest block">
@@ -861,28 +862,31 @@ export default function Home({ onOpenBrochure }) {
       {/* ========================================================================= */}
       {/* 6. INSTALLATIONS — proof; full directory lives on /about/projects         */}
       {/* ========================================================================= */}
-      <section id="installations-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="installations-section" className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <InstallationsTeaser />
+        <div id="clients-section" className="pt-8 border-t border-slate-200 scroll-mt-24">
+          <ClientLogoStrip />
+        </div>
       </section>
 
       {/* ========================================================================= */}
       {/* 7. MONOPOLY-FREE OWNERSHIP PROMISE — after-sales assurance                */}
       {/* ========================================================================= */}
-      <section id="ownership-promise" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+      <section id="ownership-promise" className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <OwnershipPolicySection />
       </section>
 
       {/* ========================================================================= */}
       {/* 8. INTERACTIVE 60-SECOND LIFT ESTIMATOR WIZARD                            */}
       {/* ========================================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <LiftEstimatorWizard onOpenBrochure={onOpenBrochure} />
       </section>
 
       {/* ========================================================================= */}
       {/* 8B. FREQUENTLY ASKED QUESTIONS — ELEVATOR PRICES & COMPANY IN AHMEDABAD   */}
       {/* ========================================================================= */}
-      <section id="home-faq" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 scroll-mt-24">
+      <section id="home-faq" className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 scroll-mt-24">
         {/* Top Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-5">
           <div className="space-y-1.5 max-w-2xl">
@@ -993,11 +997,10 @@ export default function Home({ onOpenBrochure }) {
                   key={cat.id}
                   type="button"
                   onClick={() => setFaqCategory(cat.id)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                    faqCategory === cat.id
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${faqCategory === cat.id
                       ? "bg-brand-teal text-white shadow-xs"
                       : "bg-white text-slate-600 hover:text-slate-900 border border-slate-200 hover:border-slate-300"
-                  }`}
+                    }`}
                 >
                   {cat.label}
                 </button>
@@ -1022,11 +1025,10 @@ export default function Home({ onOpenBrochure }) {
                   return (
                     <div
                       key={faq.originalIndex}
-                      className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${
-                        isOpen
+                      className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen
                           ? "border-brand-teal/50 shadow-md ring-1 ring-brand-teal/20"
                           : "border-slate-200/90 hover:border-slate-300 shadow-xs"
-                      }`}
+                        }`}
                     >
                       <button
                         type="button"
@@ -1037,28 +1039,25 @@ export default function Home({ onOpenBrochure }) {
                       >
                         <div className="flex items-start gap-3">
                           <span
-                            className={`w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-xs font-mono font-bold flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
-                              isOpen
+                            className={`w-6 h-6 sm:w-7 sm:h-7 rounded-lg text-xs font-mono font-bold flex items-center justify-center shrink-0 mt-0.5 transition-colors ${isOpen
                                 ? "bg-brand-teal text-white"
                                 : "bg-slate-100 text-slate-500 group-hover:bg-teal-50 group-hover:text-brand-teal"
-                            }`}
+                              }`}
                           >
                             {itemNumber}
                           </span>
                           <h3
-                            className={`text-sm sm:text-base font-bold transition-colors leading-snug ${
-                              isOpen ? "text-brand-teal" : "text-slate-900 group-hover:text-brand-teal"
-                            }`}
+                            className={`text-sm sm:text-base font-bold transition-colors leading-snug ${isOpen ? "text-brand-teal" : "text-slate-900 group-hover:text-brand-teal"
+                              }`}
                           >
                             {faq.q}
                           </h3>
                         </div>
                         <div
-                          className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                            isOpen
+                          className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen
                               ? "bg-brand-teal/10 text-brand-teal rotate-180"
                               : "bg-slate-100 text-slate-400 group-hover:bg-slate-200 group-hover:text-slate-600"
-                          }`}
+                            }`}
                         >
                           <ChevronDown className="w-4 h-4" />
                         </div>
@@ -1067,9 +1066,8 @@ export default function Home({ onOpenBrochure }) {
                       {/* Smooth CSS Grid Expand/Collapse */}
                       <div
                         id={`faq-answer-${faq.originalIndex}`}
-                        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
-                          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 pointer-events-none"
-                        }`}
+                        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 pointer-events-none"
+                          }`}
                       >
                         <div className="overflow-hidden">
                           <div className="pl-12 sm:pl-15 pr-4 sm:pr-6 pb-5 pt-1 space-y-3">
@@ -1097,7 +1095,7 @@ export default function Home({ onOpenBrochure }) {
       {/* ========================================================================= */}
       {/* 9. GET A QUOTE — short prompt, full inquiry form lives on /contact        */}
       {/* ========================================================================= */}
-      <section id="cta-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+      <section id="cta-section" className="defer-render max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <CTASection
           title="Discuss Your Elevator Requirement"
           subtitle="Share your building parameters with our engineering team for a complimentary AutoCAD General Arrangement (GA) hoistway layout, structural load calculation, and turnkey quotation."

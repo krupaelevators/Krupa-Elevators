@@ -1,12 +1,67 @@
 @tailwind base;
+
+/* Self-hosted fonts (SIL Open Font License, files from Google Fonts). Same origin and
+   preloaded in index.html, so they are usually ready before the first paint. */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/dm-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/dm-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500 800;
+  font-display: swap;
+  src: url("/fonts/manrope-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500 800;
+  font-display: swap;
+  src: url("/fonts/manrope-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Arial resized to the web fonts' metrics (measured from the font files), so text doesn't
+   jump when Google Fonts swap in — that jump was the home page's layout shift (CLS). */
+@font-face {
+  font-family: "DM Sans Fallback";
+  src: local("Arial"), local("ArialMT"), local("Roboto"), local("Helvetica");
+  size-adjust: 99.72%;
+  ascent-override: 99.48%;
+  descent-override: 31.09%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Manrope Fallback";
+  src: local("Arial"), local("ArialMT"), local("Roboto"), local("Helvetica");
+  size-adjust: 95.36%;
+  ascent-override: 111.79%;
+  descent-override: 31.46%;
+  line-gap-override: 0%;
+}
+
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /* Site-wide typography — swap fonts here (also update the Google Fonts link in index.html). */
+  /* Site-wide typography — swap fonts here (also update the @font-face rules above and the preloads in index.html). */
   :root {
-    --font-display: "Manrope", "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-display: "Manrope", "Manrope Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-body: "DM Sans", "DM Sans Fallback", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
     --heading-tracking: -0.012em;
   }
@@ -234,3 +289,57 @@
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
 }
+
+/* Hardware-accelerated infinite marquee animations for client logos */
+@keyframes marquee-scroll-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marquee-scroll-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-left 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-right 42s linear infinite;
+  will-change: transform;
+}
+
+/* Below-the-fold sections: the browser skips their style/layout/paint until they near the
+   viewport, which cuts the long home page's start-up work. `auto` remembers the real height
+   once rendered, so the scrollbar and #anchor jumps settle after the first pass. */
+.defer-render {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+/* Fades logo rows out at both edges, whatever the background colour */
+.logo-marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.pause-on-hover:hover .animate-marquee-left,
+.pause-on-hover:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none;
+    transform: none;
+    overflow-x: auto;
+  }
+}
+

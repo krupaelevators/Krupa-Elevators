@@ -28,9 +28,9 @@ export default function Footer({ onOpenBrochure }) {
               </picture>
               <div>
                 <span className="block text-xl font-black tracking-tight text-white">
-                  KRUPA <span className="text-brand-teal">ELEVATORS</span>
+                  KRUPA <span className="text-teal-400">ELEVATORS</span>
                 </span>
-                <span className="block text-xs font-semibold text-brand-orange uppercase tracking-wider">
+                <span className="block text-xs font-semibold text-orange-400 uppercase tracking-wider">
                   {companyData.tagline}
                 </span>
               </div>
@@ -61,9 +61,9 @@ export default function Footer({ onOpenBrochure }) {
 
           {/* Navigation Links */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white border-l-2 border-brand-teal pl-2">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white border-l-2 border-brand-teal pl-2">
               Explore Site
-            </h4>
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/" className="hover:text-white transition-colors">
@@ -86,18 +86,23 @@ export default function Footer({ onOpenBrochure }) {
                 </Link>
               </li>
               <li>
-                <Link to="/products/architects-corner" className="hover:text-white transition-colors text-brand-teal font-semibold">
+                <Link to="/products/architects-corner" className="hover:text-white transition-colors text-teal-400 font-semibold">
                   Architects CAD Hub (Drawings)
                 </Link>
               </li>
               <li>
-                <Link to="/#estimator" className="hover:text-white transition-colors text-brand-orange font-semibold">
+                <Link to="/#estimator" className="hover:text-white transition-colors text-orange-400 font-semibold">
                   60s Lift Estimator Wizard
                 </Link>
               </li>
               <li>
                 <Link to="/about/projects" className="hover:text-white transition-colors">
                   Projects Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link to="/clients" className="hover:text-white transition-colors">
+                  Our Clients
                 </Link>
               </li>
               <li>
@@ -110,9 +115,9 @@ export default function Footer({ onOpenBrochure }) {
 
           {/* Product Lines */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white border-l-2 border-brand-orange pl-2">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white border-l-2 border-brand-orange pl-2">
               Products
-            </h4>
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/products/elevators" className="hover:text-white transition-colors">
@@ -169,9 +174,9 @@ export default function Footer({ onOpenBrochure }) {
 
           {/* Facilities & Contact */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white border-l-2 border-brand-teal pl-2">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white border-l-2 border-brand-teal pl-2">
               Reach Us
-            </h4>
+            </h3>
             <div className="space-y-3 text-xs leading-relaxed">
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-brand-teal shrink-0 mt-0.5" />

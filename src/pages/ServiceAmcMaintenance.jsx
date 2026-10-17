@@ -28,7 +28,7 @@ export default function ServiceAmcMaintenance() {
   return (
     <>
       <Seo
-        title="Elevator AMC & Maintenance in Ahmedabad | 100% Monopoly-Free"
+        title="Elevator AMC & Maintenance in Ahmedabad"
         description="Affordable elevator AMC packages in Ahmedabad with 100% monopoly-free non-proprietary controllers. Zero locked passwords, certified technicians, 24/7 breakdown support, and genuine spares in Gujarat."
         keywords="elevator AMC in Ahmedabad, lift maintenance Ahmedabad, affordable elevator AMC, monopoly free elevator maintenance, lift repair Kathwada GIDC"
       />

@@ -33,9 +33,10 @@ const navGroups = [
     path: "/about",
     children: [
       { name: "About Us", path: "/about", desc: "Company, mission & facilities" },
-      { name: "Projects & Clients", path: "/about/projects", desc: "Our installation record" },
+      { name: "Project Portfolio", path: "/about/projects", desc: "Our installation record" },
     ],
   },
+  { name: "Clients", path: "/clients" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -257,6 +258,7 @@ export default function Navbar() {
                             <Link
                               key={child.path}
                               to={child.path}
+                              onClick={() => setDesktopOpenGroup(null)}
                               className={`block px-3.5 py-2.5 rounded-xl transition-all duration-200 ease-out group/item ${
                                 isChildActive(child, group)
                                   ? "bg-brand-teal-light text-brand-teal font-bold"

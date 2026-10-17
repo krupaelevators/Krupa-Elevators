@@ -1,9 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+
+// useLayoutEffect warns during the build-time prerender; there is no layout there anyway.
+const useIsomorphicLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
 /**
  * ScrollReveal Component
  * Provides subtle, hardware-accelerated scroll-triggered reveals using IntersectionObserver.
  * Designed to feel smooth, refined, and professional without over-animating ("not too much").
+ *
+ * Content is rendered visible (in the prerendered HTML too), so what is on screen at load
+ * paints immediately instead of waiting for JavaScript — that wait was the page's LCP.
+ * Only elements that start below the fold are hidden (before paint) and revealed on scroll.
  */
 export default function ScrollReveal({
   children,
@@ -18,26 +25,26 @@ export default function ScrollReveal({
   style = {},
   ...rest
 }) {
-  const [isVisible, setIsVisible] = useState(false);
+  // "static": shown, never animated · "hidden": waiting below the fold · "shown": revealed
+  const [phase, setPhase] = useState("static");
+  const isVisible = phase !== "hidden";
   const ref = useRef(null);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // Already on screen (or above it): leave it alone.
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
 
-    // Check if user prefers reduced motion
-    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsVisible(true);
-      return;
-    }
-
+    setPhase("hidden");
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setPhase("shown");
           if (once) observer.unobserve(el);
         } else if (!once) {
-          setIsVisible(false);
+          setPhase("hidden");
         }
       },
       {
@@ -78,10 +85,12 @@ export default function ScrollReveal({
       className={className}
       style={{
         ...style,
-        opacity: isVisible ? 1 : 0,
-        transform: getTransform(),
-        transition: `opacity ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
-        willChange: isVisible ? "auto" : "opacity, transform",
+        ...(phase !== "static" && {
+          opacity: isVisible ? 1 : 0,
+          transform: getTransform(),
+          transition: `opacity ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+          willChange: isVisible ? "auto" : "opacity, transform",
+        }),
       }}
       {...rest}
     >

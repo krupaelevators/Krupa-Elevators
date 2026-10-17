@@ -135,7 +135,7 @@ export default function ArchitectsCorner({ onOpenBrochurePage }) {
   return (
     <div className="min-h-screen bg-slate-50 pb-16">
       <Seo
-        title="Elevator Civil Drawings & AutoCAD GA Layouts in Ahmedabad | Krupa Elevators"
+        title="Elevator Civil Drawings & CAD Layouts"
         description="AutoCAD hoistway layouts, civil dimension tables, and structural load charts for architects and civil engineers in Ahmedabad and Gujarat by Krupa Elevators."
         keywords="elevator civil drawings, lift shaft AutoCAD DWG Ahmedabad, hoistway dimension matrix, elevator architect guide Gujarat"
       />

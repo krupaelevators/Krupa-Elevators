@@ -11,7 +11,7 @@
 export const elevatorSeoData = {
   passenger: {
     seoName: "Affordable Passenger Elevator (Best Price Guarantee)",
-    seoTitle: "Affordable Passenger Elevator | Best Price Solution in Ahmedabad",
+    seoTitle: "Passenger Elevator Manufacturer in Ahmedabad",
     seoBadge: "Affordable Solution • Best Price Guarantee",
     seoKeywords:
       "best elevator company in Ahmedabad, affordable passenger elevator, best price lift in Ahmedabad, passenger elevator manufacturer Kathwada GIDC, residential lift price Ahmedabad, commercial passenger lift Gujarat",
@@ -50,7 +50,7 @@ export const elevatorSeoData = {
 
   capsule: {
     seoName: "Affordable Capsule Glass Elevator (Best Price Guarantee)",
-    seoTitle: "Best Price Capsule Elevator | Affordable Glass Panoramic Lift in Ahmedabad",
+    seoTitle: "Capsule Glass Elevator in Ahmedabad",
     seoBadge: "Affordable Panoramic Luxury • Best Price Guarantee",
     seoKeywords:
       "capsule elevator Ahmedabad, glass lift price Ahmedabad, panoramic elevator manufacturer, affordable capsule elevator, best price glass lift Gujarat, architectural elevator Kathwada",
@@ -89,7 +89,7 @@ export const elevatorSeoData = {
 
   hospital: {
     seoName: "Affordable Hospital Stretcher Elevator (Best Price Guarantee)",
-    seoTitle: "Affordable Hospital Bed Elevator | Best Price Stretcher Lift in Ahmedabad",
+    seoTitle: "Hospital Bed & Stretcher Lift in Ahmedabad",
     seoBadge: "Affordable Healthcare Solution • Best Price Guarantee",
     seoKeywords:
       "hospital elevator Ahmedabad, stretcher lift price Ahmedabad, bed elevator manufacturer, affordable medical lift, best price hospital elevator Gujarat, NABH compliant elevator",
@@ -128,7 +128,7 @@ export const elevatorSeoData = {
 
   goods: {
     seoName: "Affordable Goods Freight Elevator (Best Price Guarantee)",
-    seoTitle: "Affordable Goods Elevator | Best Price Industrial Freight Lift in Ahmedabad",
+    seoTitle: "Goods Lift & Freight Elevator in Ahmedabad",
     seoBadge: "Affordable Heavy Industrial • Best Price Guarantee",
     seoKeywords:
       "goods elevator Ahmedabad, freight lift price Kathwada, industrial lift manufacturer Ahmedabad, affordable goods elevator, best price cargo lift Gujarat, heavy duty freight hoist",
@@ -167,7 +167,7 @@ export const elevatorSeoData = {
 
   car: {
     seoName: "Affordable Car Automobile Elevator (Best Price Guarantee)",
-    seoTitle: "Affordable Car Elevator & Parking Lift | Best Price Automobile Solution in Ahmedabad",
+    seoTitle: "Car Elevator & Parking Lift in Ahmedabad",
     seoBadge: "Affordable Automotive Mobility • Best Price Guarantee",
     seoKeywords:
       "car elevator Ahmedabad, automobile lift price Gujarat, parking lift manufacturer, affordable car elevator, best price vehicle lift, puzzle parking systems Kathwada",
@@ -206,7 +206,7 @@ export const elevatorSeoData = {
 
   mrl: {
     seoName: "Affordable MRL Elevator - Machine Room Less (Best Price Guarantee)",
-    seoTitle: "Affordable MRL Elevator (Machine-Room-Less) | Best Price Compact Lift in Ahmedabad",
+    seoTitle: "MRL Machine-Room-Less Elevator in Ahmedabad",
     seoBadge: "Affordable Space-Saving • Best Price Guarantee",
     seoKeywords:
       "MRL elevator Ahmedabad, machine room less lift price, affordable MRL elevator, best price MRL lift Gujarat, space saving elevator Kathwada, rooftop free elevator",
@@ -245,7 +245,7 @@ export const elevatorSeoData = {
 
   home: {
     seoName: "Affordable Home Villa Elevator (Best Price Guarantee)",
-    seoTitle: "Affordable Home Villa Elevator | Best Price Bungalow Lift in Ahmedabad",
+    seoTitle: "Home Lift & Villa Elevator in Ahmedabad",
     seoBadge: "Affordable Villa Luxury • Best Price Guarantee",
     seoKeywords:
       "home elevator Ahmedabad, villa lift price Ahmedabad, affordable home lift, best price bungalow elevator, residential home lift Gujarat, pitless home elevator Ahmedabad",
@@ -284,7 +284,7 @@ export const elevatorSeoData = {
 
   hydraulic: {
     seoName: "Affordable Hydraulic Elevator (Best Price Guarantee)",
-    seoTitle: "Affordable Hydraulic Elevator | Best Price Low-Rise & Pitless Lift in Ahmedabad",
+    seoTitle: "Hydraulic Lift Manufacturer in Ahmedabad",
     seoBadge: "Affordable Hydraulic Engineering • Best Price Guarantee",
     seoKeywords:
       "hydraulic elevator Ahmedabad, hydraulic lift price Gujarat, low rise elevator manufacturer, affordable hydraulic elevator, best price hydraulic lift, pitless elevator Kathwada",

@@ -30,7 +30,8 @@
     { "source": "/drawings", "destination": "/products/architects-corner", "permanent": true },
     { "source": "/specifications", "destination": "/products/elevators", "permanent": true },
     { "source": "/service", "destination": "/services", "permanent": true },
-    { "source": "/projects", "destination": "/about/projects", "permanent": true }
+    { "source": "/projects", "destination": "/about/projects", "permanent": true },
+    { "source": "/about/clients", "destination": "/clients", "permanent": true }
   ],
   "headers": [
     {
@@ -47,11 +48,15 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     },
     {
+      "source": "/fonts/(.*)\\.woff2",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
       "source": "/assets/(.*)\\.(jpg|jpeg|png|webp|svg|gif|avif|pdf)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
     },
     {
-      "source": "/(favicon.ico|icon-192.png|icon-512.png|apple-touch-icon.png|site.webmanifest)",
+      "source": "/(favicon.ico|favicon-32x32.png|favicon-48x48.png|favicon-96x96.png|icon-192.png|icon-512.png|apple-touch-icon.png|site.webmanifest)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
     },
     {

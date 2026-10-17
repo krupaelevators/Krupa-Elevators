@@ -167,7 +167,7 @@ export default function ElevatorDetail({ onOpenBrochure }) {
     <div className="min-h-screen bg-slate-50 space-y-12 sm:space-y-16 pb-20 overflow-x-hidden">
       <Seo
         title={elevator.seoTitle || `${elevator.name} — Affordable Solution & Best Price in Ahmedabad`}
-        description={`Affordable ${elevator.name} at direct factory best price by Krupa Elevators Ahmedabad. Manufactured in Kathwada GIDC. ${elevator.overview?.slice(0, 130)}`}
+        description={`${elevator.name} made at Krupa Elevators' Kathwada GIDC plant, Ahmedabad. ${elevator.overview || ""}`}
         keywords={elevator.seoKeywords}
         image={elevator.image}
         type="product"

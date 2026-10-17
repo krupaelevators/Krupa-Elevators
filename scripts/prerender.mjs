@@ -134,6 +134,9 @@ ${images
 </urlset>
 `.replace(/\n\n/g, "\n");
 fs.writeFileSync(path.join(dist, "sitemap.xml"), sitemap);
+try {
+  fs.writeFileSync(path.join(root, "public", "sitemap.xml"), sitemap);
+} catch {}
 
 // llms.txt (https://llmstxt.org): a plain-text map of the site for AI assistants,
 // generated from the same titles/descriptions the pages use.
@@ -155,13 +158,16 @@ const llms = `# KRUPA ELEVATORS
 - Service area: Ahmedabad, Gandhinagar, Vadodara, Surat, Rajkot and across Gujarat and India
 - Product brochure (PDF): ${absoluteUrl("/assets/krupa-brochure.pdf")}
 
-${section("Company", (r) => r === "/" || r.startsWith("/about") || r === "/contact")}
+${section("Company", (r) => r === "/" || r.startsWith("/about") || r === "/clients" || r === "/contact")}
 ${section("Elevators", (r) => r.startsWith("/products/elevators") || r === "/products")}
 ${section("Door systems", (r) => r.startsWith("/products/doors"))}
 ${section("Cabin interiors", (r) => r.startsWith("/products/interiors"))}
 ${section("Technology and planning", (r) => r === "/products/technology" || r === "/products/architects-corner")}
 ${section("Services", (r) => r.startsWith("/services"))}`.replace(/\n{3,}/g, "\n\n");
 fs.writeFileSync(path.join(dist, "llms.txt"), llms);
+try {
+  fs.writeFileSync(path.join(root, "public", "llms.txt"), llms);
+} catch {}
 
 fs.rmSync(serverDir, { recursive: true, force: true });
 

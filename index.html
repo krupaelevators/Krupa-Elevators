@@ -3,21 +3,34 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0799a4" />
 
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FK6G7PREH"></script>
+  <!-- Google tag (gtag.js). Calls queue in dataLayer straight away; the 175 KB library itself
+       is fetched once the page has loaded, so it doesn't compete with the first paint. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-0FK6G7PREH');
+
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-0FK6G7PREH';
+        document.head.appendChild(s);
+      }, 1500);
+    });
   </script>
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="oOdo2BmouBI2WKExdaLLXEgwghWa9A_k-EzQdxvaRw4" />
@@ -47,11 +60,9 @@
   <link rel="preload" as="image" href="/assets/hero/building.webp" type="image/webp" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/logo-clean.webp" type="image/webp" fetchpriority="high" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" />
+  <!-- Self-hosted fonts (see src/index.css): fetched in parallel with the CSS -->
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-latin.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-latin.woff2" crossorigin />
 
   <!-- Core Structured Data (JSON-LD) for LocalBusiness, ManufacturingPlant & Organization -->
   <script type="application/ld+json">
@@ -59,8 +70,8 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["LocalBusiness", "ManufacturingBusiness"],
-        "@id": "https://krupaelevators.com/#localbusiness",
+        "@type": ["Organization", "LocalBusiness", "ManufacturingBusiness"],
+        "@id": "https://krupaelevators.com/#organization",
         "name": "KRUPA ELEVATORS",
         "alternateName": ["Krupa Elevators Ahmedabad", "Krupa Elevator Manufacturing Works"],
         "description": "Ranked #1 Best Elevator Company and Manufacturing Plant in Ahmedabad, Gujarat. Direct manufacturer of affordable passenger, home, capsule, hospital, goods, car, MRL and hydraulic elevators with factory-direct best price guarantee and 100% monopoly-free AMC.",
@@ -68,8 +79,15 @@
         "telephone": "+918200859171",
         "email": "info@krupaelevators.com",
         "priceRange": "₹₹ (Affordable Direct Factory Best Price)",
-        "image": "https://krupaelevators.com/assets/hero/building.jpg",
-        "logo": "https://krupaelevators.com/assets/logo-clean.png",
+        "image": "https://krupaelevators.com/assets/logo-square.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://krupaelevators.com/assets/logo-square.png",
+          "contentUrl": "https://krupaelevators.com/assets/logo-square.png",
+          "width": 512,
+          "height": 512,
+          "caption": "KRUPA ELEVATORS Logo"
+        },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1, Heritage Industrial Hub, Nr. Global Industrial Estate, Nr. Kotak Mahindra Bank, Kathwada GIDC Road No 5",
@@ -183,7 +201,7 @@
         "url": "https://krupaelevators.com/",
         "name": "KRUPA ELEVATORS",
         "publisher": {
-          "@id": "https://krupaelevators.com/#localbusiness"
+          "@id": "https://krupaelevators.com/#organization"
         }
       }
     ]

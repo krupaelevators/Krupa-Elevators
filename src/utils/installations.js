@@ -1,4 +1,5 @@
-import { applicationData } from "../data/application";
+import { applicationData } from "../data/application.js";
+import { getClientLogo, featuredClientLogos } from "../data/clientLogos.js";
 
 /**
  * Presentation helpers for the installation records in data/application.js.
@@ -134,6 +135,7 @@ function buildSearchIndex(client) {
   const text = normalize(
     [
       client.clientName,
+      client.logoMeta?.name || "",
       client.location,
       client.region,
       client.state,
@@ -163,8 +165,12 @@ export function matchesSearch(client, query) {
 }
 
 export const installations = applicationData.map((client) => {
+  const logoInfo = getClientLogo(client.id);
   const record = {
     ...client,
+    logo: logoInfo?.src || null,
+    logoAlt: logoInfo?.alt || null,
+    logoMeta: logoInfo || null,
     buildingType: buildingTypeOf(client),
     state: stateOf(client.location),
     region: regionOf(client.location),
@@ -172,6 +178,16 @@ export const installations = applicationData.map((client) => {
   };
   record.searchIndex = buildSearchIndex(record);
   return record;
+});
+
+// One entry per client logo (see featuredClientLogos), with the lifts installed for it,
+// for the /clients page and the home-page logo strip.
+export const clientShowcase = featuredClientLogos.map((item) => {
+  const records = installations.filter((c) => c.logoMeta?.logo === item.logo);
+  return {
+    ...item,
+    lifts: records.reduce((n, c) => n + c.elevators.length, 0),
+  };
 });
 
 export const installationStats = {
