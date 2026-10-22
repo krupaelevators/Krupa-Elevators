@@ -49,6 +49,7 @@ function LandmarkCard({ client }) {
   return (
     <Link
       to={projectsLink(client)}
+      rel="nofollow"
       className="group relative flex flex-col bg-white rounded-3xl border border-slate-200 hover:border-brand-teal hover:shadow-elevate-hover transition-all overflow-hidden"
     >
       <div className="h-28 sm:h-44 flex items-center justify-center p-4 sm:p-6 bg-gradient-to-b from-slate-50 to-white">
@@ -88,6 +89,7 @@ function ClientCard({ client }) {
     <li>
       <Link
         to={projectsLink(client)}
+        rel="nofollow"
         title={`See Krupa Elevators installations at ${client.name}`}
         className="group h-full flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-brand-teal hover:shadow-md transition-all overflow-hidden"
       >
@@ -189,7 +191,7 @@ export default function Clients() {
         </ScrollReveal>
 
         {/* Landmark clients */}
-        {/* <section className="space-y-6" aria-labelledby="landmark-clients">
+        <section className="space-y-6" aria-labelledby="landmark-clients">
           <div className="max-w-2xl space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Landmark Clients</span>
             <h2 id="landmark-clients" className="text-2xl sm:text-3xl font-bold text-slate-900">
@@ -205,7 +207,7 @@ export default function Clients() {
               <LandmarkCard key={c.id} client={c} />
             ))}
           </div>
-        </section> */}
+        </section>
 
         {/* All clients */}
         <section id="all-clients" className="space-y-6 scroll-mt-24" aria-labelledby="all-clients-heading">

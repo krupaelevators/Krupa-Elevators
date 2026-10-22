@@ -55,6 +55,7 @@ export default function InstallationsTeaser() {
               <Link
                 key={t.id}
                 to={`/about/projects?type=${t.id}#installations`}
+                rel="nofollow"
                 className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-brand-teal transition-colors space-y-2"
               >
                 <div className="flex gap-3 items-center">

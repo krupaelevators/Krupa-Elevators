@@ -4,6 +4,8 @@
 # Search engines and AI assistants are welcome to read the whole site.
 User-agent: *
 Allow: /
+# Block parameter queries (filters, searches) to preserve crawl budget for real pages
+Disallow: /*?*
 
 # AI search & assistant crawlers (listed explicitly so the intent is unambiguous)
 User-agent: GPTBot
