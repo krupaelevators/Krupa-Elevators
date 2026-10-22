@@ -172,6 +172,7 @@ export default function Navbar() {
       )}
       {/* Main Compact Navbar */}
       <nav
+        aria-label="Main Navigation"
         className={`bg-white/95 backdrop-blur-md border-b transition-all duration-300 ease-out ${
           scrolled
             ? "shadow-sm border-slate-200/90 py-0"

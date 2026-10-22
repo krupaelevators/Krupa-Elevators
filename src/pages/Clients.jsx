@@ -156,7 +156,7 @@ export default function Clients() {
   return (
     <div className="min-h-screen bg-slate-50 space-y-12 sm:space-y-16 pb-4">
       <Seo
-        title="Our Clients | Temples, Hospitals, Brands & Builders"
+        title="Our Clients & Projects | Krupa Elevators"
         description={`${clientShowcase.length}+ clients trust Krupa Elevators: Salangpur Hanumanji Mandir, Vadtal Dham, Joyalukkas, hospitals, schools, factories and residential towers across Gujarat.`}
         keywords="Krupa Elevators clients, elevator company clients Ahmedabad, Salangpur mandir lift, Vadtal Dham elevator, Joyalukkas lift, hospital elevator Gujarat, builder lift supplier Ahmedabad"
         schema={schema}
