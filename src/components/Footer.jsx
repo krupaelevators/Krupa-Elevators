@@ -20,11 +20,13 @@ export default function Footer({ onOpenBrochure }) {
                   <img
                     src={companyData.footerLogo}
                     alt={companyData.name}
-                    width="237"
-                    height="48"
+                    width="169"
+                    height="36"
                     loading="lazy"
                     decoding="async"
-                    className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                    // className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                    className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+
                   />
                 </picture>
               </Link>
