@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://krupaelevators.com/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -246,10 +246,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/thumbs/home_elevator.webp</image:loc>
       <image:title>Luxury Villa / Bungalow</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/about</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -260,10 +264,14 @@
       <image:loc>https://krupaelevators.com/assets/facilities/bakrol-facility.jpg</image:loc>
       <image:title>Kathwada Manufacturing Facility</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/about/projects</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -306,10 +314,14 @@
       <image:loc>https://krupaelevators.com/assets/clients/AdityaLavish.jpg</image:loc>
       <image:title>Aditya Lavish residential project logo - Krupa Elevators passenger lift installation in Vastral, Ahmedabad</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/clients</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -512,20 +524,28 @@
       <image:loc>https://krupaelevators.com/assets/clients/Woodlink.png</image:loc>
       <image:title>Woodlink Interior Pvt Ltd manufacturing plant logo - Krupa Elevators heavy industrial goods elevator in Kathwada GIDC, Ahmedabad</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://krupaelevators.com/assets/logo-clean.png</image:loc>
       <image:title>Krupa Elevators</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/elevators</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -564,10 +584,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/hydraulic_elevator.jpg</image:loc>
       <image:title>Affordable Hydraulic Elevator (Best Price Guarantee)</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/elevators/passenger</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -582,10 +606,14 @@
       <image:loc>https://krupaelevators.com/assets/drawings/auto_passenger_technical_drawing.png</image:loc>
       <image:title>Passenger Elevator - main</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/elevators/capsule</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -600,10 +628,14 @@
       <image:loc>https://krupaelevators.com/assets/drawings/capsule_technical_drawing.png</image:loc>
       <image:title>Capsule Elevator - main</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/elevators/hospital</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -618,10 +650,14 @@
       <image:loc>https://krupaelevators.com/assets/drawings/hospital_technical_drawing.png</image:loc>
       <image:title>Hospital Elevator - main</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/elevators/goods</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -636,10 +672,14 @@
       <image:loc>https://krupaelevators.com/assets/drawings/goods_technical_drawing.png</image:loc>
       <image:title>Goods Elevator - main</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/elevators/car</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -654,10 +694,14 @@
       <image:loc>https://krupaelevators.com/assets/drawings/car_elevator_technical_drawing.png</image:loc>
       <image:title>Car Elevator &amp;amp; Multi-Level Parking - main</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/elevators/mrl</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -672,10 +716,14 @@
       <image:loc>https://krupaelevators.com/assets/drawings/mrl_technical_drawing.png</image:loc>
       <image:title>MRL (Machine Room Less) Elevator - main</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/elevators/home</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -690,10 +738,14 @@
       <image:loc>https://krupaelevators.com/assets/drawings/home_technical_drawing.png</image:loc>
       <image:title>Home Elevator - main</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/elevators/hydraulic</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -708,10 +760,14 @@
       <image:loc>https://krupaelevators.com/assets/drawings/hydraulic_technical_drawing.png</image:loc>
       <image:title>Hydraulic Elevator - main</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -770,10 +826,14 @@
       <image:loc>https://krupaelevators.com/assets/doors/auto-ss-door.jpg</image:loc>
       <image:title>Door Operator System (Headers &amp;amp; Landing Tracks)</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/collapsible</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -796,10 +856,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/hydraulic_elevator.jpg</image:loc>
       <image:title>Hydraulic Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/imperforated</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -818,10 +882,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/hydraulic_elevator.jpg</image:loc>
       <image:title>Hydraulic Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/telescopic-perforated</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -836,10 +904,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/home_elevator.jpg</image:loc>
       <image:title>Home Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/powder-coated-glass-swing</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -858,10 +930,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/hydraulic_elevator.jpg</image:loc>
       <image:title>Hydraulic Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/telescopic-solid</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -876,10 +952,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/passenger_elevator.jpg</image:loc>
       <image:title>Passenger Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/manual-swing</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -898,10 +978,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/goods_elevator.jpg</image:loc>
       <image:title>Goods Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/glass-big-vision</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -924,10 +1008,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/mrl_elevator.jpg</image:loc>
       <image:title>MRL (Machine Room Less) Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/small-vision-autodoor</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -950,10 +1038,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/mrl_elevator.jpg</image:loc>
       <image:title>MRL (Machine Room Less) Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/ss-center-opening</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -980,10 +1072,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/car_elevator.jpg</image:loc>
       <image:title>Car Elevator &amp;amp; Multi-Level Parking</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/ss-telescopic</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1010,10 +1106,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/mrl_elevator.jpg</image:loc>
       <image:title>MRL (Machine Room Less) Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/glass-full-vision</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1036,10 +1136,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/mrl_elevator.jpg</image:loc>
       <image:title>MRL (Machine Room Less) Elevator</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/center-opening-4panel</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1062,10 +1166,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/car_elevator.jpg</image:loc>
       <image:title>Car Elevator &amp;amp; Multi-Level Parking</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/door-operator-headers</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1096,10 +1204,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/car_elevator.jpg</image:loc>
       <image:title>Car Elevator &amp;amp; Multi-Level Parking</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/doors/vertical-bi-parting</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1118,10 +1230,14 @@
       <image:loc>https://krupaelevators.com/assets/elevators/car_elevator.jpg</image:loc>
       <image:title>Car Elevator &amp;amp; Multi-Level Parking</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -1212,10 +1328,14 @@
       <image:loc>https://krupaelevators.com/assets/interiors/cop_lop/calling_box_displays.png</image:loc>
       <image:title>Calling Box Display Screens</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-01</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1234,10 +1354,14 @@
       <image:loc>https://krupaelevators.com/assets/interiors/kec-05.jpg</image:loc>
       <image:title>KEC-05 — Antique Bronze Belt</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-02</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1256,10 +1380,14 @@
       <image:loc>https://krupaelevators.com/assets/interiors/kec-05.jpg</image:loc>
       <image:title>KEC-05 — Antique Bronze Belt</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-03</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1278,10 +1406,14 @@
       <image:loc>https://krupaelevators.com/assets/interiors/kec-05.jpg</image:loc>
       <image:title>KEC-05 — Antique Bronze Belt</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-04</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1303,11 +1435,15 @@
     <image:image>
       <image:loc>https://krupaelevators.com/assets/interiors/kec-07.jpg</image:loc>
       <image:title>KEC-07 — Powder Coated Minimalist</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-05</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1329,11 +1465,15 @@
     <image:image>
       <image:loc>https://krupaelevators.com/assets/interiors/kec-07.jpg</image:loc>
       <image:title>KEC-07 — Powder Coated Minimalist</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-06</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1355,11 +1495,15 @@
     <image:image>
       <image:loc>https://krupaelevators.com/assets/interiors/kec-07.jpg</image:loc>
       <image:title>KEC-07 — Powder Coated Minimalist</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-07</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1382,10 +1526,14 @@
       <image:loc>https://krupaelevators.com/assets/interiors/kec-06.jpg</image:loc>
       <image:title>KEC-06 — Designer Mirror Linear</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-08</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1408,10 +1556,14 @@
       <image:loc>https://krupaelevators.com/assets/interiors/kec-06.jpg</image:loc>
       <image:title>KEC-06 — Designer Mirror Linear</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-09</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1434,10 +1586,14 @@
       <image:loc>https://krupaelevators.com/assets/interiors/kec-06.jpg</image:loc>
       <image:title>KEC-06 — Designer Mirror Linear</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-10</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1460,10 +1616,14 @@
       <image:loc>https://krupaelevators.com/assets/interiors/kec-06.jpg</image:loc>
       <image:title>KEC-06 — Designer Mirror Linear</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/interiors/kec-11</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1486,10 +1646,14 @@
       <image:loc>https://krupaelevators.com/assets/interiors/kec-06.jpg</image:loc>
       <image:title>KEC-06 — Designer Mirror Linear</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/technology</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -1508,10 +1672,14 @@
       <image:loc>https://krupaelevators.com/assets/technologies/v3f-control.jpg</image:loc>
       <image:title>Control Panel Cabinet</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/products/architects-corner</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -1522,65 +1690,93 @@
       <image:loc>https://krupaelevators.com/assets/drawings/auto_passenger_technical_drawing.png</image:loc>
       <image:title>Passenger Elevator Architectural Drawing</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/services</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://krupaelevators.com/assets/logo-clean.png</image:loc>
       <image:title>Krupa Elevators</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/services/amc-maintenance</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://krupaelevators.com/assets/logo-clean.png</image:loc>
       <image:title>Krupa Elevators</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/services/modernization</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://krupaelevators.com/assets/logo-clean.png</image:loc>
       <image:title>Krupa Elevators</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/services/installation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://krupaelevators.com/assets/logo-clean.png</image:loc>
       <image:title>Krupa Elevators</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/services/emergency-support</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://krupaelevators.com/assets/logo-clean.png</image:loc>
       <image:title>Krupa Elevators</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://krupaelevators.com/contact</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://krupaelevators.com/assets/logo-clean.png</image:loc>
       <image:title>Krupa Elevators</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://krupaelevators.com/assets/krupa-footer.png</image:loc>
+      <image:title>KRUPA ELEVATORS</image:title>
     </image:image>
   </url>
 </urlset>

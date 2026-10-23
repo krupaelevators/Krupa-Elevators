@@ -13,27 +13,24 @@ export default function Footer({ onOpenBrochure }) {
         <div className="flex flex-wrap flex-row gap-10 pb-12 border-b border-slate-800">
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-3">
-              <picture>
-                <source srcSet={companyData.logoWebp} type="image/webp" />
-                <img
-                  src={companyData.logo}
-                  alt={companyData.name}
-                  width="226"
-                  height="48"
-                  loading="lazy"
-                  decoding="async"
-                  className="h-12 w-auto object-contain bg-white p-1 rounded-md"
-                />
-              </picture>
-              <div>
-                <span className="block text-xl font-black tracking-tight text-white">
-                  KRUPA <span className="text-teal-400">ELEVATORS</span>
-                </span>
-                <span className="block text-xs font-semibold text-orange-400 uppercase tracking-wider">
-                  {companyData.tagline}
-                </span>
-              </div>
+            <div className="space-y-2">
+              <Link to="/" className="inline-block group focus:outline-none" aria-label="Krupa Elevators Home">
+                <picture>
+                  <source srcSet={companyData.footerLogoWebp} type="image/webp" />
+                  <img
+                    src={companyData.footerLogo}
+                    alt={companyData.name}
+                    width="237"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                    className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                </picture>
+              </Link>
+              <span className="block text-xs font-semibold text-orange-400 uppercase tracking-wider">
+                {companyData.tagline}
+              </span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed max-w-md">
               {companyData.servicesSummary}. Comprehensive vertical transportation solutions engineered for residential, commercial, hospital, industrial, and luxury private villa applications in Ahmedabad, Gujarat and nationwide.

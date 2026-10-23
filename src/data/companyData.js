@@ -24,6 +24,8 @@ export const companyData = {
   brochurePdf: assetUrl("/assets/krupa-brochure.pdf"),
   logo: assetUrl("/assets/logo-clean.png"),
   logoWebp: assetUrl("/assets/logo-clean.webp"),
+  footerLogo: assetUrl("/assets/krupa-footer.png"),
+  footerLogoWebp: assetUrl("/assets/krupa-footer.webp"),
   heroImage: assetUrl("/assets/generated/capsule-hero.webp"),
   villaElevatorImage: assetUrl("/assets/generated/home-elevator.webp"),
   stats: [
