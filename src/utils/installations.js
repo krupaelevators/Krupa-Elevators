@@ -1,5 +1,5 @@
 import { applicationData } from "../data/application.js";
-import { getClientLogo, featuredClientLogos } from "../data/clientLogos.js";
+import { getClientLogo } from "../data/clientLogos.js";
 
 /**
  * Presentation helpers for the installation records in data/application.js.
@@ -54,6 +54,13 @@ export function isGoodsLift(type = "") {
   return /GOODS/i.test(type);
 }
 
+// Lifts covered by one spec row: "11 LIFT" -> 11, "... YATRIK BHAVAN (10 LIFT)" -> 10,
+// a named single unit such as "STORE LIFT" -> 1.
+export function liftCountOf(lift) {
+  const m = lift.unit.match(/(\d+)\s*LIFTS?\b/i);
+  return m ? Number(m[1]) : 1;
+}
+
 // "SPEED -1.0MPS" -> "1.0 m/s"
 export function formatSpeed(speed = "") {
   const m = speed.match(/([\d.]+)\s*MPS/i);
@@ -104,10 +111,19 @@ const LOCATION_REGION = {
   "BHUJ-KUTCH": "Kutch",
   MANKUVA: "Kutch",
   "PANVEL-MUMBAI": "Mumbai",
+  GANDHINAGAR: "Gandhinagar",
+  INDORE: "Indore",
+  UDAIPUR: "Udaipur",
 };
 
 export function regionOf(location = "") {
   return LOCATION_REGION[location.toUpperCase()] || "";
+}
+
+// Town or city of a recorded location: Ahmedabad's neighbourhoods all count as Ahmedabad.
+function townOf(location = "") {
+  const loc = location.toUpperCase();
+  return AHMEDABAD_AREAS.includes(loc) ? "AHMEDABAD" : loc;
 }
 
 // ---- Search -------------------------------------------------------------------------
@@ -135,7 +151,7 @@ function buildSearchIndex(client) {
   const text = normalize(
     [
       client.clientName,
-      client.logoMeta?.name || "",
+      client.place,
       client.location,
       client.region,
       client.state,
@@ -164,35 +180,93 @@ export function matchesSearch(client, query) {
   return q.split(" ").every((word) => wordMatches(word, client.searchIndex));
 }
 
+// ---- Display text, derived only from the recorded name, location and lifts -------------
+const KEEP_UPPER = new Set(["BAPS", "SMVS", "MLA", "LLP", "GIDC", "CG"]);
+
+// Capitalises ALL-CAPS words only, so already mixed-case text in a name is kept as written.
+function titleCase(s = "") {
+  return s.replace(/[A-Za-z]+/g, (w) => {
+    if (w !== w.toUpperCase()) return w;
+    return KEEP_UPPER.has(w) ? w : w[0] + w.slice(1).toLowerCase();
+  });
+}
+
+// The client's name exactly as on the official list, in normal case:
+// "AANGAN SKY (HANSPURA)" -> "Aangan Sky (Hanspura)". The lift total is shown separately,
+// so "KARNAVATI 7 (NEW NAROL) (TOTAL 22 LIFT)" -> "Karnavati 7 (New Narol)".
+function displayNameOf(client) {
+  const name = client.clientName
+    .replace(/\(TOTAL \d+ LIFTS?\)/i, " ")
+    .replace(/\bCGROAD\b/i, "CG ROAD")
+    .replace(/\s+/g, " ")
+    .trim();
+  return titleCase(name);
+}
+
+// "HANSPURA" -> "Hanspura, Ahmedabad"; "PANVEL-MUMBAI" -> "Panvel-Mumbai, Maharashtra".
+function placeOf(client) {
+  const loc = client.location.toUpperCase() === "CGROAD" ? "CG Road" : titleCase(client.location);
+  const parts = [loc];
+  if (client.region && !loc.toUpperCase().includes(client.region.toUpperCase())) parts.push(client.region);
+  parts.push(client.state);
+  return parts.join(", ");
+}
+
+// "22 MRL lifts" / "15 lifts (10 MRL, 4 MR, 1 hydraulic)"
+function liftSummaryOf(client) {
+  const byDrive = {};
+  for (const e of client.elevators) byDrive[driveOf(e.type)] = (byDrive[driveOf(e.type)] || 0) + liftCountOf(e);
+  const label = { mrl: "MRL", mr: "MR", hydraulic: "hydraulic" };
+  const drives = Object.entries(byDrive);
+  const noun = client.lifts === 1 ? "lift" : "lifts";
+  if (drives.length === 1) return `${client.lifts} ${label[drives[0][0]]} ${noun}`;
+  return `${client.lifts} ${noun} (${drives.map(([d, n]) => `${n} ${label[d]}`).join(", ")})`;
+}
+
 export const installations = applicationData.map((client) => {
   const logoInfo = getClientLogo(client.id);
   const record = {
     ...client,
     logo: logoInfo?.src || null,
-    logoAlt: logoInfo?.alt || null,
-    logoMeta: logoInfo || null,
-    buildingType: buildingTypeOf(client),
+    // The logo's category wins so /clients and /about/projects always agree.
+    buildingType: client.category || logoInfo?.category || buildingTypeOf(client),
     state: stateOf(client.location),
     region: regionOf(client.location),
     drives: [...new Set(client.elevators.map((e) => driveOf(e.type)))],
+    lifts: client.elevators.reduce((n, e) => n + liftCountOf(e), 0),
   };
+  record.name = displayNameOf(record);
+  record.place = placeOf(record);
+  record.liftSummary = liftSummaryOf(record);
+  record.logoAlt = record.logo
+    ? `${record.name} logo - ${record.liftSummary} installed by Krupa Elevators in ${record.place}`
+    : null;
   record.searchIndex = buildSearchIndex(record);
   return record;
 });
 
-// One entry per client logo (see featuredClientLogos), with the lifts installed for it,
-// for the /clients page and the home-page logo strip.
-export const clientShowcase = featuredClientLogos.map((item) => {
-  const records = installations.filter((c) => c.logoMeta?.logo === item.logo);
-  return {
-    ...item,
-    lifts: records.reduce((n, c) => n + c.elevators.length, 0),
-  };
-});
+// Every client on the official list, one entry each, for the /clients page.
+// Clients without a logo file are shown by name only.
+export const clientShowcase = installations.map((c) => ({
+  id: c.id,
+  name: c.name,
+  location: c.place,
+  category: c.buildingType,
+  lifts: c.lifts,
+  src: c.logo,
+  alt: c.logoAlt,
+}));
+
+// Home-page logo strip: clients with a logo, each logo image once.
+export const clientLogoStrip = clientShowcase.filter(
+  (c, i, all) => c.src && all.findIndex((o) => o.src === c.src) === i
+);
 
 export const installationStats = {
   projects: installations.length,
-  locations: new Set(installations.map((c) => c.location.toUpperCase())).size,
+  lifts: installations.reduce((n, c) => n + c.lifts, 0),
+  // Distinct towns & cities (Ahmedabad's areas counted once).
+  locations: new Set(installations.map((c) => townOf(c.location))).size,
   states: new Set(installations.map((c) => c.state)).size,
   byType: BUILDING_TYPES.map((t) => ({
     ...t,

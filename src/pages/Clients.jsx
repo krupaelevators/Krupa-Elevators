@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { Award, ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
+import { Award, ArrowRight, ArrowUpRight, Building2, MapPin } from "lucide-react";
 import PageHero from "../components/common/PageHero";
 import CTASection from "../components/common/CTASection";
 import RelatedLinks from "../components/common/RelatedLinks";
@@ -32,8 +32,6 @@ const tabs = [
   })).filter((t) => t.count > 0),
 ];
 
-const totalLifts = clientShowcase.reduce((n, c) => n + c.lifts, 0);
-
 const projectsLink = (client) => `/about/projects?q=${encodeURIComponent(client.name)}#installations`;
 
 function LiftCount({ lifts }) {
@@ -45,6 +43,24 @@ function LiftCount({ lifts }) {
   );
 }
 
+function ClientMark({ client, width, height, className }) {
+  if (client.src) {
+    return (
+      <img
+        src={client.src}
+        alt={client.alt}
+        width={width}
+        height={height}
+        loading="lazy"
+        decoding="async"
+        className={className}
+      />
+    );
+  }
+  // No logo on file: the name below the tile identifies the client.
+  return <Building2 aria-hidden="true" className="w-10 h-10 text-slate-300" />;
+}
+
 function LandmarkCard({ client }) {
   return (
     <Link
@@ -53,13 +69,10 @@ function LandmarkCard({ client }) {
       className="group relative flex flex-col bg-white rounded-3xl border border-slate-200 hover:border-brand-teal hover:shadow-elevate-hover transition-all overflow-hidden"
     >
       <div className="h-28 sm:h-44 flex items-center justify-center p-4 sm:p-6 bg-gradient-to-b from-slate-50 to-white">
-        <img
-          src={client.src}
-          alt={client.alt}
+        <ClientMark
+          client={client}
           width="200"
           height="128"
-          loading="lazy"
-          decoding="async"
           className="max-h-full max-w-[75%] object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </div>
@@ -94,13 +107,10 @@ function ClientCard({ client }) {
         className="group h-full flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-brand-teal hover:shadow-md transition-all overflow-hidden"
       >
         <div className="h-28 flex items-center justify-center p-4">
-          <img
-            src={client.src}
-            alt={client.alt}
+          <ClientMark
+            client={client}
             width="160"
             height="80"
-            loading="lazy"
-            decoding="async"
             className="max-h-full max-w-[80%] object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </div>
@@ -134,7 +144,7 @@ export default function Clients() {
       "@type": "CollectionPage",
       name: "Krupa Elevators Clients",
       url: absoluteUrl("/clients"),
-      description: `Temples, hospitals, retail brands, schools, factories and residential builders who chose Krupa Elevators for ${totalLifts}+ lifts.`,
+      description: `${installationStats.projects} clients - temples, hospitals, showrooms, schools, factories, bungalows and residential projects - for whom Krupa Elevators installed ${installationStats.lifts} lifts.`,
       isPartOf: { "@id": absoluteUrl("/#website") },
       about: { "@id": absoluteUrl("/#organization") },
       mainEntity: {
@@ -146,7 +156,7 @@ export default function Clients() {
           item: {
             "@type": "Organization",
             name: c.name,
-            logo: absoluteUrl(c.logo),
+            ...(c.src ? { logo: absoluteUrl(c.src) } : {}),
             address: { "@type": "PostalAddress", addressLocality: c.location, addressCountry: "IN" },
           },
         })),
@@ -159,8 +169,8 @@ export default function Clients() {
     <div className="min-h-screen bg-slate-50 space-y-12 sm:space-y-16 pb-4">
       <Seo
         title="Our Clients & Projects | Krupa Elevators"
-        description={`${clientShowcase.length}+ clients trust Krupa Elevators: Salangpur Hanumanji Mandir, Vadtal Dham, Joyalukkas, hospitals, schools, factories and residential towers across Gujarat.`}
-        keywords="Krupa Elevators clients, elevator company clients Ahmedabad, Salangpur mandir lift, Vadtal Dham elevator, Joyalukkas lift, hospital elevator Gujarat, builder lift supplier Ahmedabad"
+        description={`${installationStats.projects} clients trust Krupa Elevators with ${installationStats.lifts} lifts: Shree Kashtbhanjan Dev Hanumanji Mandir (Salangpur), Swaminarayan Mandir (Vadtal), Joyalukkas Showroom (CG Road), hospitals, schools, factories and residential projects in Gujarat and India.`}
+        keywords="Krupa Elevators clients, elevator company clients Ahmedabad, Salangpur mandir lift, Vadtal mandir lift, hospital elevator Gujarat, builder lift supplier Ahmedabad"
         schema={schema}
       />
 
@@ -168,8 +178,8 @@ export default function Clients() {
         breadcrumbs={[{ label: "Clients" }]}
         icon={Award}
         badge="Our Clients"
-        title={`Trusted by ${clientShowcase.length}+ Clients Across Gujarat`}
-        description="From pilgrimage trusts and children's hospitals to jewellery showrooms and residential towers, these are the organisations that chose Krupa Elevators to design, install and maintain their lifts."
+        title={`Trusted by ${installationStats.projects} Clients Across Gujarat & India`}
+        description="Temples, hospitals, showrooms, schools, factories, bungalows and residential projects where Krupa Elevators has installed lifts."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 sm:space-y-16">
@@ -177,8 +187,8 @@ export default function Clients() {
         <ScrollReveal direction="up" distance={15}>
           <dl className="grid grid-cols-2 lg:grid-cols-4 bg-white rounded-2xl border border-slate-200 divide-x divide-y lg:divide-y-0 divide-slate-200">
             {[
-              { label: "Clients", value: `${clientShowcase.length}+` },
-              { label: "Lifts installed for them", value: `${totalLifts}+` },
+              { label: "Clients", value: installationStats.projects },
+              { label: "Lifts installed", value: installationStats.lifts },
               { label: "Temples & trusts", value: tabs.find((t) => t.id === "religious")?.count ?? 0 },
               { label: "Towns & cities served", value: installationStats.locations },
             ].map((s) => (
@@ -198,8 +208,8 @@ export default function Clients() {
               Names Gujarat Knows
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Pilgrimage sites that move thousands of devotees a day, a national jewellery brand, a children's
-              hospital and a school: buildings where a lift simply has to work.
+              Temples, a jewellery showroom, a children's hospital and a school where Krupa Elevators has
+              installed lifts.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">

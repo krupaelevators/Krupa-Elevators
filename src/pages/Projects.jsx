@@ -28,6 +28,7 @@ import {
   DRIVE_TYPES,
   driveOf,
   isGoodsLift,
+  liftCountOf,
   formatSpeed,
   matchesSearch,
 } from "../utils/installations";
@@ -52,7 +53,7 @@ function InstallationCard({ client }) {
             {typeLabel[client.buildingType]}
           </span>
           <span className="shrink-0 font-medium">
-            {client.elevators.length} {client.elevators.length === 1 ? "lift" : "lifts"}
+            {client.lifts} {client.lifts === 1 ? "lift" : "lifts"}
           </span>
         </div>
 
@@ -61,7 +62,7 @@ function InstallationCard({ client }) {
             <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-xl bg-white border border-slate-200/90 p-1.5 shadow-2xs flex items-center justify-center overflow-hidden group-hover:border-brand-teal/40 transition-colors">
               <img
                 src={client.logo}
-                alt={client.logoAlt || `${client.clientName} logo - Krupa Elevators passenger lift installation in ${client.location}, Gujarat`}
+                alt={client.logoAlt}
                 width="64"
                 height="64"
                 loading="lazy"
@@ -91,12 +92,18 @@ function InstallationCard({ client }) {
       <ul className="divide-y divide-slate-100 text-xs">
         {client.elevators.map((lift, idx) => {
           const drive = driveOf(lift.type);
+          const count = liftCountOf(lift);
           return (
             <li key={idx} className="px-5 py-3 space-y-1.5">
               <div className="flex flex-wrap items-center gap-1.5">
                 <span className={`px-2 py-0.5 rounded-md border text-[10px] font-bold ${driveStyles[drive]}`}>
                   {driveLabel[drive]}
                 </span>
+                {count > 1 && (
+                  <span className="px-2 py-0.5 rounded-md border border-slate-200 bg-slate-50 text-[10px] font-bold text-slate-700">
+                    {count} lifts
+                  </span>
+                )}
                 {isGoodsLift(lift.type) && (
                   <span className="px-2 py-0.5 rounded-md border border-slate-200 text-[10px] font-bold text-slate-600">
                     Goods
@@ -210,7 +217,7 @@ export default function Projects() {
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": "Krupa Elevators - Client Installations & Landmark Projects",
-      "description": `Comprehensive installation record of ${installationStats.projects} projects across ${installationStats.locations} towns and cities including Salangpur Hanumanji Mandir, Vadtal Dham, Joyalukkas, and major residential townships in Gujarat.`,
+      "description": `Installation record of ${installationStats.lifts} lifts in ${installationStats.projects} projects across ${installationStats.locations} towns and cities including Shree Kashtbhanjan Dev Hanumanji Mandir (Salangpur), Swaminarayan Mandir (Vadtal), Joyalukkas Showroom (CG Road) and residential projects in Gujarat.`,
       "numberOfItems": installations.length,
       "itemListElement": installations.map((c, idx) => ({
         "@type": "ListItem",
@@ -218,6 +225,7 @@ export default function Projects() {
         "item": {
           "@type": "Place",
           "name": c.clientName,
+          "description": `${c.lifts} ${c.lifts === 1 ? "lift" : "lifts"} installed by Krupa Elevators`,
           "address": {
             "@type": "PostalAddress",
             "addressLocality": c.location,
@@ -235,8 +243,8 @@ export default function Projects() {
     <div className="min-h-screen bg-slate-50 space-y-12 sm:space-y-16 pb-4">
       <Seo
         title="Elevator Installation Projects in Gujarat"
-        description={`Krupa Elevators installation record — ${installationStats.projects} projects across ${installationStats.locations} locations: residential towers, temples, hospitals, bungalows, showrooms and factories in Gujarat and beyond.`}
-        keywords="Krupa Elevators clients, elevator installations Ahmedabad, lift installation Gujarat, Salangpur mandir lift, Joyalukkas elevator, hospital lifts Gujarat, passenger elevator projects"
+        description={`Krupa Elevators installation record — ${installationStats.lifts} lifts in ${installationStats.projects} projects across ${installationStats.locations} towns & cities: residential towers, temples, hospitals, bungalows, showrooms and factories in Gujarat and beyond.`}
+        keywords="Krupa Elevators clients, elevator installations Ahmedabad, lift installation Gujarat, Salangpur mandir lift, hospital lifts Gujarat, passenger elevator projects"
         schema={clientListSchema}
       />
 
@@ -273,10 +281,10 @@ export default function Projects() {
         <ScrollReveal direction="up" distance={15}>
           <dl className="grid grid-cols-2 lg:grid-cols-4 bg-white rounded-2xl border border-slate-200 divide-x divide-y lg:divide-y-0 divide-slate-200">
             {[
+              { label: "Lifts installed", value: installationStats.lifts },
               { label: "Projects completed", value: installationStats.projects },
               { label: "Towns & cities", value: installationStats.locations },
               { label: "States", value: installationStats.states },
-              { label: "Building types", value: installationStats.byType.length },
             ].map((s) => (
               <div key={s.label} className="p-5 sm:p-6">
                 <dd className="font-display text-3xl sm:text-4xl font-bold text-slate-900">{s.value}</dd>
@@ -339,7 +347,7 @@ export default function Projects() {
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Our Clients</span>
             <p className="mt-1 text-base sm:text-lg font-bold text-slate-900">
-              Salangpur Hanumanji Mandir, Vadtal Dham, Joyalukkas and {clientShowcase.length - 3}+ more
+              Shree Kashtbhanjan Dev Hanumanji Mandir (Salangpur), Swaminarayan Mandir (Vadtal), Joyalukkas Showroom (CG Road) and {clientShowcase.length - 3} more
             </p>
           </div>
           <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-teal shrink-0">

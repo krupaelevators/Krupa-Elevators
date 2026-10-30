@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { clientShowcase } from "../../utils/installations";
+import { clientLogoStrip, installationStats } from "../../utils/installations";
 
 function LogoTile({ client, hidden }) {
   return (
@@ -34,8 +34,8 @@ export default function ClientLogoStrip() {
     <div className="space-y-5">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-6">
         <p className="text-sm sm:text-base text-slate-600">
-          <span className="font-bold text-slate-900">Trusted by {clientShowcase.length}+ clients</span>
-          {" "}— temples, hospitals, brands &amp; builders across Gujarat
+          <span className="font-bold text-slate-900">Trusted by {installationStats.projects} clients</span>
+          {" "}— temples, hospitals, showrooms &amp; builders across Gujarat and India
         </p>
         <Link
           to="/clients"
@@ -48,11 +48,11 @@ export default function ClientLogoStrip() {
 
       <div className="logo-marquee-mask pause-on-hover flex overflow-hidden">
         <div className="animate-marquee-left gap-3 pr-3" style={{ animationDuration: "90s" }}>
-          {clientShowcase.map((c) => (
+          {clientLogoStrip.map((c) => (
             <LogoTile key={c.id} client={c} />
           ))}
           {/* Second copy makes the loop seamless; hidden from screen readers and tab order. */}
-          {clientShowcase.map((c) => (
+          {clientLogoStrip.map((c) => (
             <LogoTile key={`${c.id}-dup`} client={c} hidden />
           ))}
         </div>

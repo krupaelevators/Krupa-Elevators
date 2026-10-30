@@ -32,7 +32,7 @@ export default function InstallationsTeaser() {
           <div className="space-y-2 max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Our Installations</span>
             <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-              {installationStats.projects} Projects Across {installationStats.locations} Towns &amp; Cities
+              {installationStats.lifts} Lifts in {installationStats.projects} Projects Across {installationStats.locations} Towns &amp; Cities
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed">
               From apartment towers in Ahmedabad to temples, hospitals and family homes across Gujarat and{" "}

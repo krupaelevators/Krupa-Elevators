@@ -795,7 +795,7 @@ export const applicationData = [
     id: "joylukkas-showroom-cgroad",
     page: 6,
     section: "Our Valued Clients - Gujarat",
-    clientName: "JOYLUKKAS SHOWROOM (CGROAD)",
+    clientName: "JOYALUKKAS SHOWROOM (CGROAD)",
     location: "CGROAD",
     elevators: [
       {
