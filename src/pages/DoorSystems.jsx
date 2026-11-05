@@ -27,7 +27,7 @@ export default function DoorSystems() {
   return (
     <div className="min-h-screen bg-slate-50 space-y-12 sm:space-y-16 pb-20 overflow-x-hidden">
       <Seo
-        title="Elevator Door Systems & Auto Doors in Ahmedabad | Krupa Elevators"
+        title="Elevator Door Systems in Ahmedabad"
         description="Complete catalog of manual and automatic elevator doors, center-opening, telescopic, and fire-rated doors engineered by Krupa Elevators in Kathwada, Ahmedabad."
         keywords="elevator door systems, automatic elevator door Ahmedabad, telescopic elevator doors, stainless steel elevator doors Gujarat"
       />

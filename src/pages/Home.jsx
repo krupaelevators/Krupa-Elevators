@@ -129,8 +129,7 @@ export default function Home({ onOpenBrochure }) {
         name: "KRUPA ELEVATORS",
         alternateName: [
           "Krupa Elevators Ahmedabad",
-          "Best Elevator Company in Ahmedabad",
-          "Krupa Elevator Manufacturing Plant Kathwada"
+          "Krupa Elevator Manufacturing Works"
         ],
         description:
           "KRUPA ELEVATORS is the #1 best elevator company and premier manufacturing plant in Ahmedabad, Gujarat. Direct manufacturer of affordable passenger, home villa, capsule, hospital, goods, car, MRL, and hydraulic elevators with factory-direct best price guarantee and 100% monopoly-free AMC.",
@@ -213,6 +212,8 @@ export default function Home({ onOpenBrochure }) {
         {heroScenes.map((scene, index) => {
           const isActive = index === currentHeroIndex;
           const isLoaded = loadedIndices.includes(index);
+          // The preloaded next slide is also in the DOM; the page must have exactly one <h1>.
+          const BrandHeading = isActive ? "h1" : "p";
           // Render only active slide and preloaded upcoming slide to avoid channelling 700KB+ of images at once
           if (!isLoaded && !isActive) {
             return null;
@@ -263,9 +264,12 @@ export default function Home({ onOpenBrochure }) {
 
                   {/* Title + subtitle */}
                   <div className="space-y-2 sm:space-y-3">
-                    <h1 className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
+                    <BrandHeading className="text-xs sm:text-base font-bold text-slate-200 tracking-wide">
+                      KRUPA ELEVATORS | Elevator Manufacturer in Ahmedabad
+                    </BrandHeading>
+                    <p className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
                       {scene.title}
-                    </h1>
+                    </p>
                     <p className="text-xs sm:text-base text-slate-300 leading-relaxed max-w-xl">
                       {scene.subtitle}. Engineered at our Kathwada GIDC manufacturing works in Ahmedabad with direct factory best price guarantee.
                     </p>

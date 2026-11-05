@@ -86,7 +86,7 @@ export default function ElevatorDetail({ onOpenBrochure }) {
 
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
-  // Dynamic Structured Data Schema (Product + BreadcrumbList + FAQPage)
+  // Dynamic Structured Data Schema (Product + FAQPage)
   const dynamicSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -121,29 +121,6 @@ export default function ElevatorDetail({ onOpenBrochure }) {
           ratingValue: "4.9",
           reviewCount: "54"
         }
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": absoluteUrl("/")
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Elevator Models",
-            "item": absoluteUrl("/products/elevators")
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": elevator.name,
-            "item": absoluteUrl(`/products/elevators/${elevator.id}`)
-          }
-        ]
       },
       ...(elevator.faq && elevator.faq.length > 0
         ? [

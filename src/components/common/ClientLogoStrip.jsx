@@ -5,12 +5,10 @@ import { clientLogoStrip, installationStats } from "../../utils/installations";
 
 function LogoTile({ client, hidden }) {
   return (
-    <Link
-      to="/clients"
+    <div
       title={`${client.name}, ${client.location}`}
       aria-hidden={hidden || undefined}
-      tabIndex={hidden ? -1 : undefined}
-      className="shrink-0 w-24 h-14 sm:w-28 sm:h-16 rounded-xl bg-white border border-slate-200/80 hover:border-brand-teal hover:shadow-sm transition-all flex items-center justify-center p-2"
+      className="shrink-0 w-24 h-14 sm:w-28 sm:h-16 rounded-xl bg-white border border-slate-200/80 flex items-center justify-center p-2"
     >
       <img
         src={client.src}
@@ -21,13 +19,15 @@ function LogoTile({ client, hidden }) {
         decoding="async"
         className="max-w-full max-h-full object-contain rounded-md"
       />
-    </Link>
+    </div>
   );
 }
 
 /**
  * Home-page "trusted by" band: one slim row of client logos drifting left
- * (pauses on hover, static under prefers-reduced-motion), linking to /clients.
+ * (pauses on hover, static under prefers-reduced-motion). The tiles are deliberately
+ * not links: "See all clients" is the one link to /clients, because ~100 identical
+ * links would tell search engines this is the site's most important page.
  */
 export default function ClientLogoStrip() {
   return (

@@ -38,23 +38,6 @@ export default function ElevatorsIndex() {
           name: elev.seoName || elev.name,
           url: absoluteUrl(`/products/elevators/${elev.id}`)
         }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": absoluteUrl("/")
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Elevator Models",
-            "item": absoluteUrl("/products/elevators")
-          }
-        ]
       }
     ]
   };
@@ -62,7 +45,7 @@ export default function ElevatorsIndex() {
   return (
     <div className="min-h-screen bg-slate-50 pb-12">
       <Seo
-        title="Affordable Elevators & Best Price Lifts in Ahmedabad"
+        title="Elevator Models & Lifts in Ahmedabad"
         description="Explore 8 certified affordable elevator models with direct factory best price guarantee in Ahmedabad. Passenger, Home Villa, Capsule, Hospital, Goods, Car, MRL and Hydraulic lifts manufactured at Kathwada GIDC Works."
         keywords="best elevator company in Ahmedabad, affordable elevator solution, best price lift in Ahmedabad, elevator manufacturing plant Kathwada GIDC, passenger elevator best price, home lift Ahmedabad, goods lift Gujarat, MRL elevator manufacturer"
         schema={elevatorListSchema}

@@ -252,8 +252,13 @@ export default function Navbar() {
                       />
                     </Link>
 
-                    {open && (
-                      <div className="absolute top-full left-0 pt-2 w-72 z-50 animate-in fade-in zoom-in-95 slide-in-from-top-1.5 duration-200 ease-out">
+                    {/* Always rendered (hidden until opened) so these links are in the prerendered
+                        HTML: crawlers use them to find and rank the site's main pages. */}
+                    <div
+                      className={`absolute top-full left-0 pt-2 w-72 z-50 ${
+                        open ? "animate-in fade-in zoom-in-95 slide-in-from-top-1.5 duration-200 ease-out" : "hidden"
+                      }`}
+                    >
                         <div className="bg-white rounded-2xl border border-slate-200 shadow-xl p-2 divide-y divide-slate-100 ring-1 ring-black/5">
                           {group.children.map((child) => (
                             <Link
@@ -275,8 +280,7 @@ export default function Navbar() {
                             </Link>
                           ))}
                         </div>
-                      </div>
-                    )}
+                    </div>
                   </div>
                 );
               })}
