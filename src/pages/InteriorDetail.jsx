@@ -78,7 +78,7 @@ export default function InteriorDetail({ onOpenBrochure }) {
     <div className="min-h-screen bg-slate-50 pb-16">
       <Seo
         title={model.name}
-        description={model.clientOverview.slice(0, 155)}
+        description={model.clientOverview}
         image={model.image}
       />
 

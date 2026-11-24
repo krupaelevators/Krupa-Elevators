@@ -243,7 +243,7 @@ export default function Projects() {
     <div className="min-h-screen bg-slate-50 space-y-12 sm:space-y-16 pb-4">
       <Seo
         title="Elevator Installation Projects in Gujarat"
-        description={`Krupa Elevators installation record — ${installationStats.lifts} lifts in ${installationStats.projects} projects across ${installationStats.locations} towns & cities: residential towers, temples, hospitals, bungalows, showrooms and factories in Gujarat and beyond.`}
+        description={`${installationStats.lifts} lifts in ${installationStats.projects} projects across ${installationStats.locations} towns & cities: residential towers, temples, hospitals, bungalows, showrooms and factories.`}
         keywords="Krupa Elevators clients, elevator installations Ahmedabad, lift installation Gujarat, Salangpur mandir lift, hospital lifts Gujarat, passenger elevator projects"
         schema={clientListSchema}
       />

@@ -60,8 +60,8 @@ export default function Products() {
   return (
     <div className="min-h-screen bg-slate-50 pb-12">
       <Seo
-        title="Products"
-        description="Explore Krupa Elevators' full product range — passenger, capsule, hospital, goods, car, MRL, home & hydraulic elevators, door systems, interior cabins, drive technology, and the architects' CAD hub."
+        title="Elevator Products & Catalogue"
+        description="Krupa Elevators' full catalogue: 8 elevator models, landing door systems, cabin interiors, drive and safety technology, and CAD drawings for architects."
       />
 
       <PageHero

@@ -11,7 +11,7 @@ export default function ServiceInstallation() {
     <>
       <Seo
         title="Elevator Installation & Commissioning Process"
-        description="Our end-to-end installation workflow — from initial requirement consultation and building survey through manufacturing, on-site erection, and statutory commissioning."
+        description="Our elevator installation process, from requirement consultation and building survey through manufacturing, on-site erection and statutory commissioning."
       />
       <div className="min-h-screen bg-slate-50 pb-12 overflow-x-hidden">
         <PageHero

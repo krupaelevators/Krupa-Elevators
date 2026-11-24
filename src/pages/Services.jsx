@@ -68,7 +68,7 @@ export default function Services() {
   return (<>
     <Seo
       title="Services & AMC Maintenance"
-      description="Professional elevator installation, 100% monopoly-free AMC maintenance, modernization, and 24/7 emergency support across Ahmedabad and Gujarat from Krupa Elevators."
+      description="Elevator installation, monopoly-free AMC, modernization and 24/7 emergency support across Ahmedabad and Gujarat from Krupa Elevators."
       keywords="elevator installation Ahmedabad, elevator AMC service, lift modernization Gujarat, elevator repair Ahmedabad, best elevator company in Ahmedabad"
     />
     <div className="min-h-screen bg-slate-50 pb-12 overflow-x-hidden">

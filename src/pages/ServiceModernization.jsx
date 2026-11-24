@@ -11,7 +11,7 @@ export default function ServiceModernization() {
     <>
       <Seo
         title="Elevator Modernization & Retrofitting"
-        description="Upgrade aging elevators with modern V3F drives, microprocessor controllers, automatic door systems, and refreshed cabin interiors — without rebuilding the existing hoistway."
+        description="Upgrade aging elevators with V3F drives, microprocessor controllers, automatic doors and new cabin interiors, without rebuilding the existing hoistway."
       />
       <div className="min-h-screen bg-slate-50 pb-12 overflow-x-hidden">
         <PageHero

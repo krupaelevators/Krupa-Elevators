@@ -183,8 +183,8 @@ export default function Contact({ onOpenBrochure }) {
   return (
     <div className="min-h-screen bg-slate-50 pb-12 ">
       <Seo
-        title="Contact Us | Free Elevator Quote & Site Survey"
-        description="Contact Krupa Elevators — rated #1 best elevator company in Ahmedabad. Request a free site survey, custom AutoCAD hoistway layout, or affordable elevator quotation direct from our Kathwada manufacturing plant."
+        title="Contact Us | Free Elevator Quote"
+        description="Contact Krupa Elevators in Kathwada GIDC, Ahmedabad for a free site survey, AutoCAD hoistway layout or elevator quotation. Call +91 82008 59171."
         keywords="best elevator company in Ahmedabad, elevator quotation Ahmedabad, affordable elevator solution, best price lift in Ahmedabad, elevator contact Kathwada GIDC"
       />
 

@@ -46,7 +46,7 @@ export default function Technologies() {
     <div className="min-h-screen bg-slate-50 pb-12">
       <Seo
         title="Elevator Drive & Safety Technology"
-        description="High-efficiency PMSM gearless motors, German V3F vector inverters, open-protocol controllers, and failsafe ARD passenger safety technology engineered by Krupa Elevators in Kathwada, Ahmedabad."
+        description="PMSM gearless motors, German V3F vector inverters, open-protocol controllers and ARD rescue devices, engineered by Krupa Elevators in Kathwada, Ahmedabad."
         keywords="elevator technology Ahmedabad, PMSM gearless elevator drive, V3F inverter lift, automatic rescue device elevator, open protocol elevator controller"
       />
 

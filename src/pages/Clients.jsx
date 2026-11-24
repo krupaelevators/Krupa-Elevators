@@ -169,7 +169,7 @@ export default function Clients() {
     <div className="min-h-screen bg-slate-50 space-y-12 sm:space-y-16 pb-4">
       <Seo
         title="Our Clients"
-        description={`${installationStats.projects} clients trust Krupa Elevators with ${installationStats.lifts} lifts: Shree Kashtbhanjan Dev Hanumanji Mandir (Salangpur), Swaminarayan Mandir (Vadtal), Joyalukkas Showroom (CG Road), hospitals, schools, factories and residential projects in Gujarat and India.`}
+        description={`${installationStats.projects} clients and ${installationStats.lifts} lifts across Gujarat & India, including Salangpur Hanumanji Mandir, Vadtal Swaminarayan Mandir, Joyalukkas, hospitals and schools.`}
         keywords="Krupa Elevators clients, elevator company clients Ahmedabad, Salangpur mandir lift, Vadtal mandir lift, hospital elevator Gujarat, builder lift supplier Ahmedabad"
         schema={schema}
       />

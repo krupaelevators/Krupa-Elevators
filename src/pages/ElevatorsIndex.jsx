@@ -46,7 +46,7 @@ export default function ElevatorsIndex() {
     <div className="min-h-screen bg-slate-50 pb-12">
       <Seo
         title="Elevator Models & Lifts in Ahmedabad"
-        description="Explore 8 certified affordable elevator models with direct factory best price guarantee in Ahmedabad. Passenger, Home Villa, Capsule, Hospital, Goods, Car, MRL and Hydraulic lifts manufactured at Kathwada GIDC Works."
+        description="8 elevator models made at our Kathwada GIDC plant in Ahmedabad: passenger, home villa, capsule, hospital, goods, car, MRL and hydraulic lifts."
         keywords="best elevator company in Ahmedabad, affordable elevator solution, best price lift in Ahmedabad, elevator manufacturing plant Kathwada GIDC, passenger elevator best price, home lift Ahmedabad, goods lift Gujarat, MRL elevator manufacturer"
         schema={elevatorListSchema}
       />

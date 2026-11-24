@@ -44,7 +44,7 @@ export default function DoorDetail() {
     <div className="min-h-screen bg-slate-50 space-y-12 sm:space-y-16 pb-20 overflow-x-hidden">
       <Seo
         title={door.name}
-        description={door.summary.slice(0, 155)}
+        description={door.summary}
         image={door.image}
       />
 

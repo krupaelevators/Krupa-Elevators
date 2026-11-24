@@ -125,7 +125,7 @@ export default function Interior({ onOpenBrochure }) {
     <div className="min-h-screen bg-slate-50 pb-12">
       <Seo
         title="Elevator Cabin Interiors in Ahmedabad"
-        description="Explore Krupa Elevators' 11 luxury cabin interior series across Basic, Standard, Semi Designer, and Premium collections. Stainless steel, titanium gold, laser-etched AG patterns, and LED ceilings at affordable direct factory prices in Ahmedabad."
+        description="11 elevator cabin interior series, from Basic to Premium: stainless steel, titanium gold, laser-etched patterns and LED ceilings, factory-direct in Ahmedabad."
         keywords="elevator cabin interior Ahmedabad, luxury elevator cabin, stainless steel lift interior, titanium gold elevator cabin, lift interior manufacturer Gujarat"
       />
 

@@ -21,7 +21,7 @@ export default function ServiceEmergencySupport() {
     <>
       <Seo
         title="24/7 Emergency Elevator Breakdown Support"
-        description="Dedicated mobile service vans across Ahmedabad, Gandhinagar, and Sanand/Bavla with a 30-45 minute emergency response guarantee, genuine OEM spare parts, and certified technicians."
+        description="24/7 elevator breakdown support with a 30-45 minute response guarantee across Ahmedabad, Gandhinagar and Sanand/Bavla, using genuine spare parts."
       />
       <div className="min-h-screen bg-slate-50 pb-12 overflow-x-hidden">
         <PageHero
